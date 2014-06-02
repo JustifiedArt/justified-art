@@ -1,2 +1,2 @@
-justifiedart
+Justified Art!
 ============
