@@ -91,15 +91,49 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+* {
+	font-family:Helvetica Neue;
+}
 
+.nav a {
+  color: #5a5a5a;
+  font-family: "Novecentowide-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 3px;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
 
+.jumbotron {
+  background-image:url('http://goo.gl/04j7Nn');
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
+.jumbotron .container {
+  position: relative;
+  top:100px;
+}
 
+.learn-more h3 {
+font-family: "Novecentowide-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
+font-size: 1.15em;
+letter-spacing: 1px;
+color: rgb(85, 85, 85);
+text-align: center;
+padding-bottom: 1em;
+margin-bottom: 2em;
+border-bottom: 1px solid rgb(230, 230, 230);
+float: none;
+text-transform: uppercase;
+display: block;
+}
 
-
-
-
-
+#footer {
+    background-color: rgb(201, 205, 206);
+    padding: 2em 0px;
+}
 
 
 
