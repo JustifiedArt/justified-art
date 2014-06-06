@@ -15,6 +15,7 @@
         <!-- Bootstrap resources-->
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
 
 		
     </head>
@@ -25,43 +26,50 @@
 
         <!-- Add your site or application content here -->
         
-        <nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Justified Art!</a>
-    </div>
+        <nav id="justified-nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">Justified Art!</a>
+		      <img height="40px" src="img/logo-black.png"/>
+		    </div>
+		
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		   
+		      
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#">Submit</a></li>
+		        <li><a href="#">Jury</a></li>
+		        <li><a href="#">About</a></li>
+		        
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-   
-      
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Submit</a></li>
-        <li><a href="#">Jury</a></li>
-        <li><a href="#">About</a></li>
-        
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
 
-<div id="wrap">
 	
-<div class="jumbotron">
-</div>
+		<div class="hero">
+			<div id="titleRow" class="row">
+				<div id="title">
+					<h1>JUSTIFIED ART!</h1>
+				</div>
+			</div>
+		</div>
 
 		<div class="learn-more">
+			<div id="learn-more-container">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4">
-						<h3>ENTRY INFO</h3>
+						<h3><a href="#">ENTRY INFO</a></h3>
 						<p>
 							Learn about the Justified Art! Call for Entries, how and when you can submit your work, and more.
 						</p>
@@ -70,7 +78,7 @@
 						</p>
 					</div>
 					<div class="col-md-4">
-						<h3>SUBMIT YOUR WORK</h3>
+						<h3><a href="#">SUBMIT YOUR WORK</a></h3>
 						<p>
 							Entries will be accepted until November 2014
 						</p>
@@ -79,7 +87,7 @@
 						</p>
 					</div>
 					<div class="col-md-4">
-						<h3>MEET THE JURY</h3>
+						<h3><a href="#">MEET THE JURY</a></h3>
 						<p>
 							Learn about the jury who will select artwork for inclusion in Justified Art!
 						</p>
@@ -89,174 +97,130 @@
 					</div>
 				</div>
 			</div>
+			<div class="empty-space"></div>
+			<div class="empty-space"></div>
+			</div>
 		</div>
-</div>
 
-<br><br><br><br><br>
-<br><br><br><br><br>
-
-<section id="footer-defoult" class="padding-60">
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 margin-btm20">
-                <div class="footer-column">
-                    <h3>
-
-                        Newsletter
-
-                    </h3>
-                    <p class="margin-btm20">
-
-
-                                                        Join the Justified Art! newsletter to be notified about the Call for Entries, events and for important updates.
-
-                    </p>
-                </div>
-                <!--
-
-                footer columns end
-
-                -->
-            </div>
-            <div class="col-md-4 margin-btm20">
-                <div class="footer-column">
-                    <h3>
-
-                        Links
-
-                    </h3>
-                    <ul class="list-unstyled post-list">
-                        <li>
-                            <a class="hover-color" href="#">
-
-                                Blog slide post
-
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover-color" href="#">
-
-                                Lorem ipsum dollor
-
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover-color" href="#">
-
-                                Blog image post
-
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover-color" href="#">
-
-                                Blog Video post
-
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover-color" href="#">
-
-                                Lorem ipsum dollor
-
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!--
-
-                footer columns end
-
-                -->
-            
-            </div>
-            <div class="col-md-4 margin-btm20">
-                <div class="footer-column">
-                    <h3>
-
-                        Contact
-
-                    </h3>
-                    <ul class="list-unstyled contact-list margin-btm20">
-                      
-                       
-                        <li>
-                            <i class="ion-ios7-email"></i>
-                            <strong>
-
-                                Email:
-
-                            </strong>
-
-                             info@justifiedart.com
-
-                        </li>
-                     
-                    </ul>
-                    <ul class="list-unstyled list-inline social">
-                        <li>
-                            <a href="#">
-                                <i class="ion-social-facebook-outline" data-original-title="Like On Facebook" title="" data-placement="top" data-toggle="tooltip"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="ion-social-twitter-outline" data-original-title="Follow On twitter" title="" data-placement="top" data-toggle="tooltip"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="ion-social-googleplus-outline" data-original-title="Follow On googleplus" title="" data-placement="top" data-toggle="tooltip"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="ion-social-pinterest-outline" data-original-title="pinterest" title="" data-placement="top" data-toggle="tooltip"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="ion-social-skype-outline" data-original-title="skype" title="" data-placement="top" data-toggle="tooltip"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!--
-
-                footer columns end
-
-                -->
-            </div>
-        </div>
-        <!--
-
-        row end 
-
-        -->
-        <div class="divied-40"></div>
-        <div class="row">
-            <div class="col-md-12 text-center margin-btm20">
-                <a href="index.html">
-                    <img src="img/logo-white.png"></img>
-                </a>
-            </div>
-            <div class="col-md-12 text-center">
-                <span>
-
-                    © Copyright 2014. All rights reserved.
-
-                </span>
-            </div>
-        </div>
-    </div>
-    <!--
-
-    container
-
-    -->
-
-</section>
+		<section id="footer" class="padding-60">
+		
+		    <div class="container">
+		        <div class="row">
+		            <div class="col-md-4 margin-btm20">
+		                <div class="footer-column">
+		                    <h3>Newsletter</h3>
+		                    <p class="margin-btm20">Join the Justified Art! newsletter to be notified about the Call for Entries, events and for important updates.</p>
+		                </div>
+		                <!--
+		
+		                footer columns end
+		
+		                -->
+		            </div>
+		            <div class="col-md-4 margin-btm20">
+		                <div class="footer-column">
+		                    <h3>Links</h3>
+		                    <ul class="list-unstyled post-list">
+		                        <li><a  href="#">Blog slide post</a></li>
+		                        <li><a  href="#">Lorem ipsum dollor</a></li>
+		                        <li><a  href="#">Blog image post</a></li>
+		                        <li><a  href="#">Blog Video post</a></li>
+		                        <li><a  href="#">Lorem ipsum dollor</a></li>
+		                    </ul>
+		                </div>
+		                <!--
+		
+		                footer columns end
+		
+		                -->
+		            
+		            </div>
+		            <div class="col-md-4 margin-btm20">
+		                <div class="footer-column">
+		                    <h3>
+		
+		                        Contact
+		
+		                    </h3>
+		                    <ul class="list-unstyled contact-list margin-btm20">
+		                      
+		                       
+		                        <li>
+		                            <i class="ion-ios7-email"></i>
+		                            <strong>
+		
+		                                Email:
+		
+		                            </strong>
+		
+		                             info@justifiedart.com
+		
+		                        </li>
+		                     
+		                    </ul>
+		                    <ul class="list-unstyled list-inline social">
+		                        <li>
+		                            <a href="#">
+		                                <i class="ion-social-facebook-outline" data-original-title="Like On Facebook" title="" data-placement="top" data-toggle="tooltip"></i>
+		                            </a>
+		                        </li>
+		                        <li>
+		                            <a href="#">
+		                                <i class="ion-social-twitter-outline" data-original-title="Follow On twitter" title="" data-placement="top" data-toggle="tooltip"></i>
+		                            </a>
+		                        </li>
+		                        <li>
+		                            <a href="#">
+		                                <i class="ion-social-googleplus-outline" data-original-title="Follow On googleplus" title="" data-placement="top" data-toggle="tooltip"></i>
+		                            </a>
+		                        </li>
+		                        <li>
+		                            <a href="#">
+		                                <i class="ion-social-pinterest-outline" data-original-title="pinterest" title="" data-placement="top" data-toggle="tooltip"></i>
+		                            </a>
+		                        </li>
+		                        <li>
+		                            <a href="#">
+		                                <i class="ion-social-skype-outline" data-original-title="skype" title="" data-placement="top" data-toggle="tooltip"></i>
+		                            </a>
+		                        </li>
+		                    </ul>
+		                </div>
+		                <!--
+		
+		                footer columns end
+		
+		                -->
+		            </div>
+		        </div>
+		        <!--
+		
+		        row end 
+		
+		        -->
+		        <div class="divied-40"></div>
+		        <div class="row">
+		            <div class="col-md-12 text-center margin-btm20">
+		                <a href="index.html">
+		                    <img height="40px" src="img/logo-white.png"></img>
+		                </a>
+		            </div>
+		            <div class="col-md-12 text-center">
+		                <span>
+		
+		                    © Copyright 2014. All rights reserved.
+		
+		                </span>
+		            </div>
+		        </div>
+		    </div>
+		    <!--
+		
+		    container
+		
+		    -->
+		
+		</section>
 <!--
 
 footer default end

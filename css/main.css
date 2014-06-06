@@ -91,8 +91,18 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-* {
-	font-family:Helvetica Neue;
+body{
+	font-family: 'Oswald', sans-serif;
+	font-weight:300;
+	background-image: url("http://www.westwoodgallery.com/highslide/images/large/01_Adelman%20pg%20140%20Redemption.jpg");
+	background-size:cover;
+	background-attachment:fixed;
+	width:100%;
+	padding-top: 50px;
+}
+
+#justified-nav{
+	margin-bottom:0;
 }
 
 .nav a {
@@ -104,46 +114,73 @@ textarea {
   text-transform: uppercase;
 }
 
-.jumbotron {
-  background-image: url("http://www.westwoodgallery.com/highslide/images/large/01_Adelman%20pg%20140%20Redemption.jpg");
+.hero {
+  width:100%;
   height: 500px;
   background-size: cover;
   background-repeat: no-repeat;
+  text-align:center;
 }
-
-.jumbotron .container {
-  position: relative;
-  top:100px;
+#titleRow{
+	margin:300px auto;
 }
-
+#title h1{
+	color:rgb(128,0,0);
+	font-family:'Oswald', sans-serif;
+	font-weight:400;
+	font-size:10em;
+	text-shadow: 2px 2px #fff;
+}
+.learn-more{
+	background:url('../img/solidarity.jpg');
+	width:100%;
+	background-size:cover;
+}
+#learn-more-container{
+	background-color:rgba(255,255,255,.8);
+	width:100%;
+}
+#learn-more-container a{
+	color:rgb(202,129,66);
+}
+#learn-more-container a:hover{
+	color:rgb(66,139,202);
+	text-decoration:none;
+}
 .learn-more h3 {
-font-family: "Novecentowide-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
-font-size: 1.15em;
-letter-spacing: 1px;
-color: rgb(85, 85, 85);
-text-align: center;
-padding-bottom: 1em;
-margin-bottom: 2em;
-border-bottom: 1px solid rgb(230, 230, 230);
-float: none;
-text-transform: uppercase;
-display: block;
+	font-family: "Novecentowide-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 1.15em;
+	letter-spacing: 1px;
+	color: rgb(85, 85, 85);
+	text-align: center;
+	padding-bottom: 1em;
+	margin-bottom: 2em;
+	border-bottom: 1px solid rgb(230, 230, 230);
+	text-transform: uppercase;
+	display: block;
 }
 
-#footer-defoult {
+#footer {
     background: none repeat scroll 0% 0% #363839;
-        background-color: #363839;
-        background-image: none;
-        background-repeat: repeat;
-        background-attachment: scroll;
-        background-position: 0% 0%;
-        background-clip: border-box;
-        background-origin: padding-box;
-        background-size: auto auto;
-        text-align: center;
-    color: #8C8989;
+    background-color: rgba(54, 56, 57, .9);
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-size: auto auto;
+    text-align: center;
+	color: #8C8989;
 }
-
+#footer a:hover{
+	color:rgb(202,129,66);
+	text-decoration:none;
+}
+.empty-space{
+	height:200px;
+	width:100%;
+}
 
 
 
