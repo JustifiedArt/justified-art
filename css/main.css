@@ -105,7 +105,7 @@ textarea {
 }
 
 .jumbotron {
-  background-image:url('http://goo.gl/04j7Nn');
+  background-image: url("http://www.westwoodgallery.com/highslide/images/large/01_Adelman%20pg%20140%20Redemption.jpg");
   height: 500px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -130,11 +130,19 @@ text-transform: uppercase;
 display: block;
 }
 
-#footer {
-    background-color: rgb(201, 205, 206);
-    padding: 2em 0px;
+#footer-defoult {
+    background: none repeat scroll 0% 0% #363839;
+        background-color: #363839;
+        background-image: none;
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-position: 0% 0%;
+        background-clip: border-box;
+        background-origin: padding-box;
+        background-size: auto auto;
+        text-align: center;
+    color: #8C8989;
 }
-
 
 
 
