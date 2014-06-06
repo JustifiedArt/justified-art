@@ -122,13 +122,13 @@ body{
   text-align:center;
 }
 #titleRow{
-	margin:300px auto;
+	margin: auto;
 }
 #title h1{
 	color:rgb(128,0,0);
 	font-family:'Oswald', sans-serif;
 	font-weight:400;
-	font-size:10em;
+	font-size: 10em auto;
 	text-shadow: 2px 2px #fff;
 }
 .learn-more{
@@ -172,6 +172,22 @@ body{
     background-size: auto auto;
     text-align: center;
 	color: #8C8989;
+}
+.footer-column h3{
+	font-family: "Novecentowide-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 1.15em;
+	letter-spacing: 1px;
+	text-align: left;
+	padding-bottom: 1em;
+	margin-bottom: 1em;
+	border-bottom: 1px solid rgb(230, 230, 230);
+	text-transform: uppercase;
+}
+.footer-column p {
+	text-align: left;
+}
+.footer-column ul {
+	text-align: left;
 }
 #footer a:hover{
 	color:rgb(202,129,66);
