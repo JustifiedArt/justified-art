@@ -95,7 +95,7 @@ body{
 	font-family: 'Oswald', sans-serif;
 	font-weight:300;
 	background-image: url("http://www.westwoodgallery.com/highslide/images/large/01_Adelman%20pg%20140%20Redemption.jpg");
-	background-size:cover;
+	background-size:100% 100%;
 	background-attachment:fixed;
 	width:100%;
 	padding-top: 50px;
