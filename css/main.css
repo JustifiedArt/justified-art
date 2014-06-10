@@ -161,8 +161,12 @@ body{
 	text-transform: uppercase;
 	display: block;
 	opacity: 1.0;
+	
 }
 
+.learn-more p {
+	background-color: rgb(230, 230, 230)
+}
 #footer {
     background: none repeat scroll 0% 0% #363839;
     background-color: rgba(54, 56, 57, .9);
@@ -206,8 +210,17 @@ body{
 	
 }
 
-
-
+.section-heading h2 {
+    font-size: 3em;
+    color: #FFAE3F;
+   }
+.section-heading p {
+    font-size: 1.5em;
+    color: #C2C2C2;
+}
+* {
+    box-sizing: border-box;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
