@@ -41,7 +41,6 @@
 		      <a class="navbar-brand" href="index.html">Justified Art!</a>
 		      <img height="40px" src="img/logo-white.png"/>
 		    </div>
-		
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		   
@@ -57,8 +56,40 @@
 		</nav>
 		<!-- content Area -->
 		
-		<div class="empty-space"></div>
-		<div class="empty-space"></div>
+		<div class="container">
+			
+			<div id="form-container">
+				<p style="max-width:600px; margin:0 auto; padding:20px;">Thank you for your interest.  Please fill out the very short form below.<br/>
+					If you do not have all the information or have any questions, <strong>we still need to hear your voice!</strong><br/>
+				 	Please contact us at ______@____.com or 608-555-5555</p>
+				<form role="form" method="post" name="submission-form" action"submit.php">
+					<div class="form-group">
+						<label for="input-from">From:</label>
+						<input id="input-from" class="form-control" type="text" name="from"><br/><br/>
+					</div>
+					<div class="form-group">
+						<label for="form-subject">Subject: </label>
+						<input id="form-subject" class="form-control" type="text" name="subject"><br/><br/>
+					</div>
+					<div class="form-group">
+						<label for="form-message">Message:</label>
+						<textarea id="form-message" class="form-control" rows="10" cols="40" name="message"></textarea><br/><br/>
+					</div>
+					<article class="form-group">
+					  <div class="form-control" id="holder">
+					  </div> 
+					  <p id="upload" class="hidden"><label>Drag &amp; drop not supported, but you can still upload via this input field:<br><input type="file"></label></p>
+					  <p id="filereader">File API &amp; FileReader API not supported</p>
+					  <p id="formdata">XHR2's FormData is not supported</p>
+					  <p id="progress">XHR2's upload progress isn't supported</p>
+					  <p>Upload progress: <progress id="uploadprogress" min="0" max="100" value="0">0</progress></p>
+					  <label for="holder">Drag an image from your desktop on to the drop zone above to see the browser both render the preview, but also upload automatically to this server.</label>
+					</article>
+					<input type="submit" name="submit" value="Justified Art!">
+				</form>
+			</div>
+		</div>
+	
 		<div class="empty-space"></div>
 		
 		<!-- End content Area -->
