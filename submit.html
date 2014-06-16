@@ -62,7 +62,13 @@
 				<p style="max-width:600px; margin:0 auto; padding:20px;">Thank you for your interest.  Please fill out the very short form below.<br/>
 					If you do not have all the information or have any questions, <strong>we still need to hear your voice!</strong><br/>
 				 	Please contact us at ______@____.com or 608-555-5555</p>
-				<form role="form" method="post" name="submission-form" action"submit.php">
+				<form role="form" method="post" name="submission-form" action"submit.php" enctype="multipart/form-data">
+						<input type="hidden" name="key" value="testfile.txt" />
+						<input type="hidden" name="acl" value="public-read" />
+						<input type="hidden" name="content-type" value="text/plain" />
+						<input type="hidden" name="AWSAccessKeyId" value="AKIAJDKCZ5WM2D2SA7LA" />
+						<input type="hidden" name="policy" value="ewogICJleHBpcmF0aW9uIjogIjIwMDktMDEtMDFUMTI6MDA6MDAuMDAwWiIsCiAgImNvbmRpdGlvbnMiOiBbCiAgICB7ImJ1Y2tldCI6ICJqdXN0aWZpZWRhcnQiIH0sCiAgICB7ImFjbCI6ICJwdWJsaWMtcmVhZCIgfSwKICAgIFsiZXEiLCAiJGtleSIsICJ0ZXN0ZmlsZS50eHQiXSwKICAgIFsic3RhcnRzLXdpdGgiLCAiJENvbnRlbnQtVHlwZSIsICJ0ZXh0LyJdLAogIF0KfQo=" />
+						<input type="hidden" name="signature" value="JRv85u5CpnAjQRz13TkJg+c3bag=" />
 					<div class="form-group">
 						<label for="input-from">From:</label>
 						<input id="input-from" class="form-control" type="text" name="from"><br/><br/>
