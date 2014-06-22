@@ -131,25 +131,25 @@ body{
 	font-size: 10em;
 	text-shadow: 2px 2px #fff;
 }
-.learn-more{
+.section-two, .section-four{
 	background:url('../img/hands-raised-bw.png');
 	width:100%;
 	background-size:cover;
 	background-color:rgba(255,255,255,.8);
 }
-#learn-more-container{
+#section-two-container, #section-four-container{
 	opacity: 1.0;
 	width:100%;
 
 }
-#learn-more-container a{
+.triple-box-row a{
 	color:rgb(202,129,66);
 }
-#learn-more-container a:hover{
+.triple-box-row a:hover{
 	color:rgb(66,139,202);
 	text-decoration:none;
 }
-.learn-more h3 {
+.triple-box-row h3 {
 	font-family: "Novecentowide-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
 	font-size: 1.15em;
 	letter-spacing: 1px;
@@ -164,8 +164,15 @@ body{
 	
 }
 
-.learn-more p {
-	background-color: rgb(230, 230, 230)
+.triple-box-row {
+	margin-top:2em;
+	background-color: rgba(230, 230, 230, .9);
+	border-radius: 10px;
+	padding-top: 2em;
+	padding-bottom:2em;
+}
+h3.step{
+	font-size:2em;
 }
 #footer {
     background: none repeat scroll 0% 0% #363839;
@@ -187,7 +194,7 @@ body{
 	text-align: left;
 	padding-bottom: 1em;
 	margin-bottom: 1em;
-	border-bottom: 1px solid rgb(230, 230, 230);
+	border-bottom: 1px solid rgb(255, 255, 255);
 	text-transform: uppercase;
 }
 .footer-column p {
@@ -210,13 +217,17 @@ body{
 	
 }
 
-.section-heading h2 {
+.section-heading h2, .section-closing h2 {
     font-size: 3em;
     color: #FFAE3F;
    }
-.section-heading p {
+.section-heading p, .section-closing p{
     font-size: 1.5em;
     color: #C2C2C2;
+}
+.section-closing{
+	font-size:.8em;
+	text-align:right;
 }
 * {
     box-sizing: border-box;
@@ -252,6 +263,21 @@ progress:after { content: '%'; }
 	font-size:16pt;
 	padding:2em;
 	text-align:justify;
+}
+#about-section-content{
+	margin-bottom:3em;
+	padding:2em;
+	background-color:rgba(255,255,255,.9);
+	border-radius:10px;
+}
+/*
+ * Jury Styles
+ */
+.team-member{
+	margin-bottom:3em;
+	padding:2em;
+	background-color:rgba(255,255,255,.9);
+	border-radius:10px;
 }
 /* ==========================================================================
    Helper classes
