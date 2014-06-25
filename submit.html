@@ -62,36 +62,38 @@
 				<p style="max-width:600px; margin:0 auto; padding:20px;">Thank you for your interest.  Please fill out the very short form below.<br/>
 					If you do not have all the information or have any questions, <strong>we still need to hear your voice!</strong><br/>
 				 	Please contact us at ______@____.com or 608-555-5555</p>
-				<form role="form" method="post" name="submission-form" action"submit.php" enctype="multipart/form-data">
-						<input type="hidden" name="key" value="testfile.txt" />
-						<input type="hidden" name="acl" value="public-read" />
-						<input type="hidden" name="content-type" value="text/plain" />
+				<p class="required">* Required</p>
+				<form role="form" method="post" name="submission-form" action"https://justifiedart-submissions.s3-website-us-east-1.amazonaws.com" enctype="multipart/form-data">
+						<input type="hidden" name="key" value="uploads/${filename}" />
 						<input type="hidden" name="AWSAccessKeyId" value="AKIAJDKCZ5WM2D2SA7LA" />
+						<input type="hidden" name="acl" value="public-read" />
+						<input type="hidden" name="success_action_redirect" value="success.html">
 						<input type="hidden" name="policy" value="ewogICJleHBpcmF0aW9uIjogIjIwMDktMDEtMDFUMTI6MDA6MDAuMDAwWiIsCiAgImNvbmRpdGlvbnMiOiBbCiAgICB7ImJ1Y2tldCI6ICJqdXN0aWZpZWRhcnQiIH0sCiAgICB7ImFjbCI6ICJwdWJsaWMtcmVhZCIgfSwKICAgIFsiZXEiLCAiJGtleSIsICJ0ZXN0ZmlsZS50eHQiXSwKICAgIFsic3RhcnRzLXdpdGgiLCAiJENvbnRlbnQtVHlwZSIsICJ0ZXh0LyJdLAogIF0KfQo=" />
 						<input type="hidden" name="signature" value="JRv85u5CpnAjQRz13TkJg+c3bag=" />
+						<input type="hidden" name="content-type" value="image/jpeg" />
 					<div class="form-group">
-						<label for="input-from">From:</label>
-						<input id="input-from" class="form-control" type="text" name="from"><br/><br/>
+						<label for="form-firstName">First Name <span class="required">*</span>:</label>
+						<input id="form-firstName" class="form-control" type="text" name="firstName"><br/><br/>
 					</div>
 					<div class="form-group">
-						<label for="form-subject">Subject: </label>
-						<input id="form-subject" class="form-control" type="text" name="subject"><br/><br/>
+						<label for="form-lastName">Last Name: </label>
+						<input id="form-lastName" class="form-control" type="text" name="lastName"><br/><br/>
 					</div>
 					<div class="form-group">
-						<label for="form-message">Message:</label>
-						<textarea id="form-message" class="form-control" rows="10" cols="40" name="message"></textarea><br/><br/>
+						<label for="form-address">Address:</label>
+						<input id="form-address" class="form-control" type="text" name="address"><br/><br/>
 					</div>
 					<article class="form-group">
 					  <div class="form-control" id="holder">
 					  </div> 
-					  <p id="upload" class="hidden"><label>Drag &amp; drop not supported, but you can still upload via this input field:<br><input type="file"></label></p>
+					  <p id="upload" class="hidden"><label>Drag &amp; drop not supported, but you can still upload via this input field:<br><input name="file" type="file"></label></p>
 					  <p id="filereader">File API &amp; FileReader API not supported</p>
 					  <p id="formdata">XHR2's FormData is not supported</p>
 					  <p id="progress">XHR2's upload progress isn't supported</p>
 					  <p>Upload progress: <progress id="uploadprogress" min="0" max="100" value="0">0</progress></p>
 					  <label for="holder">Drag an image from your desktop on to the drop zone above to see the browser both render the preview, but also upload automatically to this server.</label>
 					</article>
-					<input type="submit" name="submit" value="Justified Art!">
+					<input type="submit" name="submit" onclick="submit();" value="Submit!">
 				</form>
 			</div>
 		</div>
