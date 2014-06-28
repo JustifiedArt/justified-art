@@ -1,3 +1,38 @@
+//form validation script
+var formatText = function(text){
+	var tempText = text.toLowerCase().replace(' ', '');
+	return tempText;
+};
+
+var validFiles = ['jpeg'];
+
+function validateFile(){
+	var firstName = formatText($('#firstName')[0].value);
+	var lastName = formatText($('#lastName')[0].value);
+	
+	var sFileName = $('#ImageFile1-1')[0].value;
+	var validFile;
+	for(i=0; i<validFiles.length; i++){
+		var sCurExtension = validFiles[i];
+		validFile = false;
+		if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()){
+			validFile = true;
+			break;
+		}
+	}
+	if (!validFile) {
+        alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", "));
+        return false;
+    }
+	else{
+		$('#ImageName1-1')[0].value = "uploads/" + lastName + firstName + "." + sCurExtension;
+		console.log("uploads/" + lastName + firstName + "." + sCurExtension);
+		$('ImageForm1-1').submit();
+	}
+	
+	
+}
+
 
 //
 //
@@ -64,7 +99,7 @@ function readfiles(files) {
     // now post a new XHR request
     if (tests.formdata) {
       var xhr = new XMLHttpRequest();
-      xhr.open('POST', '/devnull.php');
+      xhr.open('POST', '/submit.php');
       xhr.onload = function() {
         progress.value = progress.innerHTML = 100;
       };

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
 		Remove this if you use the .htaccess -->
@@ -59,42 +59,135 @@
 		<div class="container">
 			
 			<div id="form-container">
+				<div class="ss-form-heading"><h1 class="ss-form-title">Justified Art! Submission Form</h1>
 				<p style="max-width:600px; margin:0 auto; padding:20px;">Thank you for your interest.  Please fill out the very short form below.<br/>
 					If you do not have all the information or have any questions, <strong>we still need to hear your voice!</strong><br/>
 				 	Please contact us at ______@____.com or 608-555-5555</p>
-				<p class="required">* Required</p>
-				<form role="form" method="post" name="submission-form" action"https://justifiedart-submissions.s3-website-us-east-1.amazonaws.com" enctype="multipart/form-data">
-						<input type="hidden" name="key" value="uploads/${filename}" />
-						<input type="hidden" name="AWSAccessKeyId" value="AKIAJDKCZ5WM2D2SA7LA" />
-						<input type="hidden" name="acl" value="public-read" />
-						<input type="hidden" name="success_action_redirect" value="success.html">
-						<input type="hidden" name="policy" value="ewogICJleHBpcmF0aW9uIjogIjIwMDktMDEtMDFUMTI6MDA6MDAuMDAwWiIsCiAgImNvbmRpdGlvbnMiOiBbCiAgICB7ImJ1Y2tldCI6ICJqdXN0aWZpZWRhcnQiIH0sCiAgICB7ImFjbCI6ICJwdWJsaWMtcmVhZCIgfSwKICAgIFsiZXEiLCAiJGtleSIsICJ0ZXN0ZmlsZS50eHQiXSwKICAgIFsic3RhcnRzLXdpdGgiLCAiJENvbnRlbnQtVHlwZSIsICJ0ZXh0LyJdLAogIF0KfQo=" />
-						<input type="hidden" name="signature" value="JRv85u5CpnAjQRz13TkJg+c3bag=" />
-						<input type="hidden" name="content-type" value="image/jpeg" />
-					<div class="form-group">
-						<label for="form-firstName">First Name <span class="required">*</span>:</label>
-						<input id="form-firstName" class="form-control" type="text" name="firstName"><br/><br/>
-					</div>
-					<div class="form-group">
-						<label for="form-lastName">Last Name: </label>
-						<input id="form-lastName" class="form-control" type="text" name="lastName"><br/><br/>
-					</div>
-					<div class="form-group">
-						<label for="form-address">Address:</label>
-						<input id="form-address" class="form-control" type="text" name="address"><br/><br/>
-					</div>
-					<article class="form-group">
-					  <div class="form-control" id="holder">
-					  </div> 
-					  <p id="upload" class="hidden"><label>Drag &amp; drop not supported, but you can still upload via this input field:<br><input name="file" type="file"></label></p>
-					  <p id="filereader">File API &amp; FileReader API not supported</p>
-					  <p id="formdata">XHR2's FormData is not supported</p>
-					  <p id="progress">XHR2's upload progress isn't supported</p>
-					  <p>Upload progress: <progress id="uploadprogress" min="0" max="100" value="0">0</progress></p>
-					  <label for="holder">Drag an image from your desktop on to the drop zone above to see the browser both render the preview, but also upload automatically to this server.</label>
-					</article>
-					<input type="submit" name="submit" onclick="submit();" value="Submit!">
+				<meta itemprop="embedUrl" content="https://docs.google.com/spreadsheet/embeddedform?formkey=dEF5T1FCSXRBbkZzY0tySEpGUWs3V1E6MA">
+				<div class="ss-form-container">
+					<div class="ss-form-desc ss-no-ignore-whitespace">YAY!</div>
+					<hr class="ss-email-break" style="display:none;">
+					<div class="ss-required-asterisk">* Required</div></div>
+					<div class="ss-form">
+						<script type="text/javascript">var submitted=false;</script>
+						<iframe name="submitImage_iframe" id="submitImage_iframe" style="display:none;" onload="if(submitted) {window.location='submitImages.html';}"></iframe>
+						<form onsubmit="submitted=true;" target="submitImage_iframe" action="https://docs.google.com/spreadsheet/formResponse?formkey=dEF5T1FCSXRBbkZzY0tySEpGUWs3V1E6MA&amp;ifq" method="POST" id="ss-form">
+							<br><div class="errorbox-good">
+							<div class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_0">First Name
+							<span class="ss-required-asterisk">*</span></label>
+							<label class="ss-q-help" for="entry_0"></label>
+							<input type="text" name="entry.0.single" value="" class="ss-q-short" id="entry_0"></div></div></div>
+							<br><div class="errorbox-good">
+							<div class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_1">Last Name
+							<span class="ss-required-asterisk">*</span></label>
+							<label class="ss-q-help" for="entry_1"></label>
+							<input type="text" name="entry.1.single" value="" class="ss-q-short" id="entry_1"></div></div></div>
+							<br> <div class="errorbox-good">
+							<div class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_2">Address
+							<span class="ss-required-asterisk">*</span></label>
+							<label class="ss-q-help" for="entry_2"># and Street</label>
+							<input type="text" name="entry.2.single" value="" class="ss-q-short" id="entry_2"></div></div></div>
+							<br> <div class="errorbox-good">
+							<div class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_13">City, State, Zip
+							<span class="ss-required-asterisk">*</span></label>
+							<label class="ss-q-help" for="entry_13"></label>
+							<input type="text" name="entry.13.single" value="" class="ss-q-short" id="entry_13"></div></div></div>
+							<br> <div class="errorbox-good">
+							<div class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_4">Phone Number
+							<span class="ss-required-asterisk">*</span></label>
+							<label class="ss-q-help" for="entry_4"></label>
+							<input type="text" name="entry.4.single" value="" class="ss-q-short" id="entry_4"></div></div></div>
+							<br> <div class="errorbox-good">
+							<div class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_15">E-mail
+							<span class="ss-required-asterisk">*</span></label>
+							<label class="ss-q-help" for="entry_15"></label>
+							<input type="text" name="entry.15.single" value="" class="ss-q-short" id="entry_15"></div></div></div>
+							<br> <div class="errorbox-good">
+							<div class="ss-item ss-item-required ss-select"><div class="ss-form-entry"><label class="ss-q-title" for="entry_6">Which is the best way to contact you?
+							<span class="ss-required-asterisk">*</span></label>
+							<label class="ss-q-help" for="entry_6"></label>
+							<select name="entry.6.single" id="entry_6"><option value="E-mail">E-mail</option> <option value="Phone">Phone</option> <option value="Mail">Mail</option></select></div></div></div>
+							<br> <div class="errorbox-good">
+							<div class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_8">Entry 1 Title
+							<span class="ss-required-asterisk">*</span></label>
+							<label class="ss-q-help" for="entry_8"></label>
+							<input type="text" name="entry.8.single" value="" class="ss-q-short" id="entry_8"></div></div></div>
+							<br> <div class="errorbox-good">
+							<div class="ss-item ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_19">Artwork Size (Height x Width x Depth)
+							</label>
+							<label class="ss-q-help" for="entry_19">in inches (can be an estimate)</label>
+							<input type="text" name="entry.19.single" value="" class="ss-q-short" id="entry_19"></div></div></div>
+							<br> <div class="errorbox-good">
+							<div class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_21">Media
+							<span class="ss-required-asterisk">*</span></label>
+							<label class="ss-q-help" for="entry_21">watercolor, photography, etc</label>
+							<input type="text" name="entry.21.single" value="" class="ss-q-short" id="entry_21"></div></div></div>
+							<br> <div class="errorbox-good">
+							<div class="ss-item ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_25">Entry 2 Title
+							</label>
+							<label class="ss-q-help" for="entry_25"></label>
+							<input type="text" name="entry.25.single" value="" class="ss-q-short" id="entry_25"></div></div></div>
+							<br> <div class="errorbox-good">
+							<div class="ss-item ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_27">Artwork Size (Height x Width x Depth)
+							</label>
+							<label class="ss-q-help" for="entry_27">in inches (can be an estimate)</label>
+							<input type="text" name="entry.27.single" value="" class="ss-q-short" id="entry_27"></div></div></div>
+							<br> <div class="errorbox-good">
+							<div class="ss-item ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_29">Media
+							</label>
+							<label class="ss-q-help" for="entry_29">watercolor, photography, etc</label>
+							<input type="text" name="entry.29.single" value="" class="ss-q-short" id="entry_29"></div></div></div>
+							<br> <div class="errorbox-good">
+							<div class="ss-item ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_31">Entry 3 Title
+							</label>
+							<label class="ss-q-help" for="entry_31"></label>
+							<input type="text" name="entry.31.single" value="" class="ss-q-short" id="entry_31"></div></div></div>
+							<br> <div class="errorbox-good">
+							<div class="ss-item ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_33">Artwork Size (Height x Width x Depth)
+							</label>
+							<label class="ss-q-help" for="entry_33">in inches (can be an estimate)</label>
+							<input type="text" name="entry.33.single" value="" class="ss-q-short" id="entry_33"></div></div></div>
+							<br> <div class="errorbox-good">
+							<div class="ss-item ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_35">Media
+							</label>
+							<label class="ss-q-help" for="entry_35">watercolor, photography, etc</label>
+							<input type="text" name="entry.35.single" value="" class="ss-q-short" id="entry_35"></div></div></div>
+							<br>
+							<input type="hidden" name="pageNumber" value="0">
+							<input type="hidden" name="backupCache" value="">
+							
+							
+							<div class="ss-item ss-navigate"><div class="ss-form-entry">
+							<input type="submit" name="submit" value="Submit">
+							</div>
+							</div>
 				</form>
+				<script type="text/javascript">
+				      
+				      (function() {
+						var divs = document.getElementById('ss-form').
+						getElementsByTagName('div');
+						var numDivs = divs.length;
+						for (var j = 0; j < numDivs; j++) {
+						if (divs[j].className == 'errorbox-bad') {
+						divs[j].lastChild.firstChild.lastChild.focus();
+						return;
+						}
+						}
+						for (var i = 0; i < numDivs; i++) {
+						var div = divs[i];
+						if (div.className == 'ss-form-entry' &&
+						div.firstChild &&
+						div.firstChild.className == 'ss-q-title') {
+						div.lastChild.focus();
+						return;
+						}
+						}
+					})();
+				</script>
+	</div>
+</div>
+				
 			</div>
 		</div>
 	
