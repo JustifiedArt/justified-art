@@ -92,7 +92,7 @@ textarea {
    ========================================================================== */
 <style type="text/css">
 		#intro { 
-			background: url(images/intro.png) 50% 0 fixed; 
+			background: url(images/intro.png) 50% 0 fixed no-repeat; 
 			height: auto;  
 			margin: 0 auto; 
 		    width: 100%; 
@@ -104,7 +104,7 @@ textarea {
 			background: url(../img/Rotunda_ArchDetails_02.jpg) 50% 0 fixed; 
 			height: auto;  
 			margin: 0 auto; 
-		    width: 100%; 
+		    width: auto; 
 		    position: relative; 
 		    box-shadow: 0 0 50px rgba(0,0,0,0.8);
 		    padding: 200px 0;
