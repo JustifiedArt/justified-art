@@ -4,13 +4,32 @@ var formatText = function(text){
 	return tempText;
 };
 
-var validFiles = ['jpeg'];
-
-function validateFile(){
+var validFiles = ['jpeg', 'png', 'jpg'];
+function submitImages(){
+	var sFileName1 = $('#ImageFile1-1')[0].value;
+	var sFileName2 = $('#ImageFile1-2')[0].value;
+	
+	file1Valid = validateFile(sFileName1, '1-1');
+	file2Valid = validateFile(sFileName2, '1-2');
+	
+	if(file1Valid!==false){
+		console.log("submitting " + file1Valid);
+		$('#ImageName1-1')[0].value = file1Valid;
+		window.alert("Submitting the first image, please click 'ok' to continue...");
+		$('ImageForm1-1').submit();
+	}
+	if(file2Valid!==false){
+		console.log("submitting " + file2Valid);
+		$('#ImageName1-2')[0].value = file2Valid;
+		window.alert("Submitting the second image, please click 'ok' to continue...");
+		$('ImageForm1-2').submit();
+	}
+}
+var validateFile = function(sFileName, imageNum){
+	console.log(sFileName);
 	var firstName = formatText($('#firstName')[0].value);
 	var lastName = formatText($('#lastName')[0].value);
 	
-	var sFileName = $('#ImageFile1-1')[0].value;
 	var validFile;
 	for(i=0; i<validFiles.length; i++){
 		var sCurExtension = validFiles[i];
@@ -21,17 +40,18 @@ function validateFile(){
 		}
 	}
 	if (!validFile) {
-        alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", "));
+		if(sFileName!==""){
+			alert("Sorry, '" + sFileName + "' is invalid, allowed extensions are: " + validFiles.join(", "));
+        }
         return false;
     }
 	else{
-		$('#ImageName1-1')[0].value = "uploads/" + lastName + firstName + "." + sCurExtension;
-		console.log("uploads/" + lastName + firstName + "." + sCurExtension);
-		$('ImageForm1-1').submit();
+		return "uploads/" + lastName + firstName + imageNum + "." + sCurExtension;
+		//console.log("uploads/" + lastName + firstName + "." + sCurExtension);
 	}
 	
 	
-}
+};
 
 
 //

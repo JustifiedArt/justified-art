@@ -70,9 +70,19 @@
 					<input type="hidden" name="policy" value="ewogICJleHBpcmF0aW9uIjogIjIwMTUtMDEtMDFUMTI6MDA6MDAuMDAwWiIsCiAgImNvbmRpdGlvbnMiOiBbCiAgICB7ImJ1Y2tldCI6ICJqdXN0aWZpZWRhcnQuY29tIiB9LAogICAgeyJhY2wiOiAicHVibGljLXJlYWQiIH0sCiAgICBbInN0YXJ0cy13aXRoIiwgIiRrZXkiLCAidXBsb2Fkcy8iXSwKICAgIFsic3RhcnRzLXdpdGgiLCAiJENvbnRlbnQtVHlwZSIsICJpbWFnZS8iXSwKICAgIFsiY29udGVudC1sZW5ndGgtcmFuZ2UiLCAwLCAyMDk3MTUyXQogIF0KfQo=" />
 					<input type="hidden" name="signature" value="LBkBk/GCeJ5uj0LlGrEpZLscvWI=" />
 					<input id="ImageFile1-1" name="file" type="file" />
-					<input onclick="validateFile();" name="submit" value="Upload" type="submit" />
+					<input onclick="submitImages();" name="submit" value="Upload" type="submit" />
 				</form>
-				
+				<form id="ImageForm1-2" action="http://justifiedart.com.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
+					<input id="ImageName1-2" type="hidden" name="key" value="uploads/${filename}" />
+					<input type="hidden" name="acl" value="public-read" />
+					<input type="hidden" name="content-type" value="image/jpeg" />
+					<input type="hidden" name="AWSAccessKeyId" value="AKIAJDKCZ5WM2D2SA7LA" />
+					<input type="hidden" name="policy" value="ewogICJleHBpcmF0aW9uIjogIjIwMTUtMDEtMDFUMTI6MDA6MDAuMDAwWiIsCiAgImNvbmRpdGlvbnMiOiBbCiAgICB7ImJ1Y2tldCI6ICJqdXN0aWZpZWRhcnQuY29tIiB9LAogICAgeyJhY2wiOiAicHVibGljLXJlYWQiIH0sCiAgICBbInN0YXJ0cy13aXRoIiwgIiRrZXkiLCAidXBsb2Fkcy8iXSwKICAgIFsic3RhcnRzLXdpdGgiLCAiJENvbnRlbnQtVHlwZSIsICJpbWFnZS8iXSwKICAgIFsiY29udGVudC1sZW5ndGgtcmFuZ2UiLCAwLCAyMDk3MTUyXQogIF0KfQo=" />
+					<input type="hidden" name="signature" value="LBkBk/GCeJ5uj0LlGrEpZLscvWI=" />
+					<input id="ImageFile1-2" name="file" type="file" />
+					<input onclick="submitImages();" name="submit" value="Upload" type="submit" />
+				</form>
+				<a href="javascript: submitImages()">Submit forms with JavaScript</A> 
 				
 				<!--HTML5 DnD uploader-->
 				<!--<article class="form-group">
