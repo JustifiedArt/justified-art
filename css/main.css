@@ -267,10 +267,26 @@ progress:after { content: '%'; }
  */
 #form-container, #about{
 	background-color:rgba(255,255,255, .95);
-	text-align:center;
+	text-align:left;
 	position:relative;
 	float:left;
 	padding:20px;
+}
+.ss-form-heading{
+	background-color:#5A5A5A;
+	color:#fff;
+	text-align:center;
+}
+.ss-form-entry{
+	margin-left:10px;
+}
+.form-section{
+	background-color:#5A5A5A;
+	color:#fff;
+	padding-left:10px;
+}
+.form-section h4{
+	line-height:1.4em;
 }
 /*
  * About page styles
