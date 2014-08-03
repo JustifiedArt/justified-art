@@ -63,7 +63,92 @@ var validateFile = function(sFileName, imageNum){
 		return false;
 	}
 };
-
+var validateGoogleForm = function(){
+	var valid = true;
+	
+	var requiredArray = [0,1,36,2,13,15,8,21,43,45];
+	
+	
+	for(i=0; i<requiredArray.length; i++){
+		var currentEntry = $('#'+'entry_'+requiredArray[i])[0].value;
+		
+		if(currentEntry.length===0){
+			var currentLabel = $("label[for='"+ 'entry_'+requiredArray[i] +"']").text();
+			currentLabel = currentLabel.replace(/(\r\n|\n|\r|\t)/gm,"");
+			if(currentLabel.length>20){
+				currentLabel = currentLabel.substr(0,20) + '...';
+			}
+			alert('Please fill out "' + currentLabel + '" and ALL other required fields marked by an asterisk(*) before continuing.');
+			valid=false;
+			break;
+		}
+	}
+	//If any of artWork #2 fields are filled out, make sure the rest are as well
+	var artwork2 = false;
+	var requiredArray2 = [25,29,53,55];
+	for(i=0;i<requiredArray2.length;i++){
+		var currentEntry = $('#'+'entry_'+requiredArray2[i])[0].value;
+		if(currentEntry.length>0){
+			artwork2 = true;
+			break;
+		}
+	}
+	if(artwork2){
+		for(i=0;i<requiredArray2.length;i++){
+			var currentEntry = $('#'+'entry_'+requiredArray2[i])[0].value;
+			if(currentEntry.length===0){
+				var currentLabel = $("label[for='"+ 'entry_'+requiredArray2[i] +"']").text();
+				currentLabel = currentLabel.replace(/(\r\n|\n|\r|\t)/gm,"");
+				if(currentLabel.length>20){
+					currentLabel = currentLabel.substr(0,20) + '...';
+				}
+				alert('It looks like you are going to submit a second piece of artwork.  If so, please fill out "' + currentLabel + '" for Artwork 2 before continuing.  Otherwise, make sure ALL Artwork 2 fields are empty.');
+				valid=false;
+				break;
+			}
+		}
+	}
+	//same for Artwork #3
+	var artwork3 = false;
+	var requiredArray3 = [31,61,57,63];
+	for(i=0;i<requiredArray3.length;i++){
+		var currentEntry = $('#'+'entry_'+requiredArray3[i])[0].value;
+		if(currentEntry.length>0){
+			artwork3 = true;
+			break;
+		}
+	}
+	if(artwork3){
+		for(i=0;i<requiredArray3.length;i++){
+			var currentEntry = $('#'+'entry_'+requiredArray3[i])[0].value;
+			if(currentEntry.length===0){
+				var currentLabel = $("label[for='"+ 'entry_'+requiredArray3[i] +"']").text();
+				currentLabel = currentLabel.replace(/(\r\n|\n|\r|\t)/gm,"");
+				if(currentLabel.length>20){
+					currentLabel = currentLabel.substr(0,20) + '...';
+				}
+				alert('It looks like you are going to submit a third piece of artwork.  If so, please fill out "' + currentLabel + '" for Artwork 3 before continuing.  Otherwise, make sure ALL Artwork 3 fields are empty.');
+				valid=false;
+				break;
+			}
+		}
+	}
+	
+	//for checkbox
+	var checkbox = $('#group_68_1')[0];
+	if(checkbox.checked!==true){
+		alert('You must read and agree to the terms and conditions.');
+		return false;
+	}
+	//see if all fields have content
+	if(!valid){
+		//alert('Please review the form and fill in ALL required fields marked by an asterisk (*) before continuing.');
+		return false;
+	}
+	else{
+		return true;
+	}
+};
 
 //
 //
