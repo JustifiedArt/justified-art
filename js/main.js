@@ -5,52 +5,63 @@ var formatText = function(text){
 };
 
 var validFiles = ['jpeg', 'png', 'jpg'];
+
 function submitImages(){
-	var sFileName1 = $('#ImageFile1-1')[0].value;
-	var sFileName2 = $('#ImageFile1-2')[0].value;
+	var url = document.URL;
+	var imageNum = url.substr(url.search("submitImages")+12, 1);
+	var nextImageNum = parseInt(imageNum) + 1;
+	var nextUrl = 'submitImages' + nextImageNum + '.html';
 	
-	file1Valid = validateFile(sFileName1, '1-1');
-	file2Valid = validateFile(sFileName2, '1-2');
+	var sFileName1 = $('#ImageFile')[0].value;
 	
-	if(file1Valid!==false){
-		console.log("submitting " + file1Valid);
-		$('#ImageName1-1')[0].value = file1Valid;
-		window.alert("Submitting the first image, please click 'ok' to continue...");
-		$('ImageForm1-1').submit();
-	}
-	if(file2Valid!==false){
-		console.log("submitting " + file2Valid);
-		$('#ImageName1-2')[0].value = file2Valid;
-		window.alert("Submitting the second image, please click 'ok' to continue...");
-		$('ImageForm1-2').submit();
+	fileValid = validateFile(sFileName1, imageNum);
+	
+	if(fileValid!==false){
+		console.log("submitting " + fileValid);
+		$('#ImageName')[0].value = fileValid;
+		//window.alert("Submitting the first image, please click 'ok' to continue...");
+		$('ImageForm').submit();
+		
+		if(parseInt(imageNum)<3){
+			console.log(nextUrl);
+			//alert("Submitting for Artwork 1.  Click 'ok' to continue to Artwork number 2...");
+			setTimeout(function() {window.location= nextUrl; },1000);
+		}else{
+			console.log('thanks for your submission!');
+			setTimeout(function() {window.location.href="thankYou.html";});
+		}
 	}
 }
 var validateFile = function(sFileName, imageNum){
 	console.log(sFileName);
 	var firstName = formatText($('#firstName')[0].value);
 	var lastName = formatText($('#lastName')[0].value);
+	if(firstName.length!==0 || lastName.length!==0){
 	
-	var validFile;
-	for(i=0; i<validFiles.length; i++){
-		var sCurExtension = validFiles[i];
-		validFile = false;
-		if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()){
-			validFile = true;
-			break;
+		var validFile;
+		for(i=0; i<validFiles.length; i++){
+			var sCurExtension = validFiles[i];
+			validFile = false;
+			if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()){
+				validFile = true;
+				break;
+			}
+		}
+		if (!validFile) {
+			if(sFileName!==""){
+				alert("Sorry, '" + sFileName + "' is invalid, allowed extensions are: " + validFiles.join(", "));
+	        }
+	        return false;
+	    }
+		else{
+			return "uploads/" + lastName + firstName + imageNum + "." + sCurExtension;
+			console.log("uploads/" + lastName + firstName + "." + sCurExtension);
 		}
 	}
-	if (!validFile) {
-		if(sFileName!==""){
-			alert("Sorry, '" + sFileName + "' is invalid, allowed extensions are: " + validFiles.join(", "));
-        }
-        return false;
-    }
 	else{
-		return "uploads/" + lastName + firstName + imageNum + "." + sCurExtension;
-		//console.log("uploads/" + lastName + firstName + "." + sCurExtension);
+		alert('Please Enter a first and last name in the fields provided.');
+		return false;
 	}
-	
-	
 };
 
 

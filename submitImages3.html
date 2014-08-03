@@ -59,30 +59,26 @@
 		<div class="container">
 			
 			<div id="form-container">
-				<p>Almost done!  Just submit ONE image for each entry and we will get back to you by MONTH, DAY with the decisions</p>
+				<h4>Artwork #3</h4>
+				<p>Almost done!  Just submit ONE image for each entry and we will get back to you by MONTH, DAY with the decisions.</p>
+				<p>Each image must be JPEG or PNG formatted image and less than 2MB each in size.</p>
+				<br/>
+				<p>If you are not submitting a second piece, <a href="index.html">click here</a> to return to the <a href="index.html">Justified Art!</a> home page</p>
+				<br/>
 				First Name: <input type="text" name="firstName" id="firstName" value="">
 				Last Name: <input type="text" name="lastName" id="lastName" value="">
-				<form id="ImageForm1-1" action="http://justifiedart.com.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
-					<input id="ImageName1-1" type="hidden" name="key" value="uploads/${filename}" />
+				<br/><br/>
+				<form onsubmit="return(submitImages());" id="ImageForm" action="http://justifiedart.com.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
+					<input id="ImageName" type="hidden" name="key" value="uploads/${filename}" />
 					<input type="hidden" name="acl" value="public-read" />
 					<input type="hidden" name="content-type" value="image/jpeg" />
 					<input type="hidden" name="AWSAccessKeyId" value="AKIAJDKCZ5WM2D2SA7LA" />
 					<input type="hidden" name="policy" value="ewogICJleHBpcmF0aW9uIjogIjIwMTUtMDEtMDFUMTI6MDA6MDAuMDAwWiIsCiAgImNvbmRpdGlvbnMiOiBbCiAgICB7ImJ1Y2tldCI6ICJqdXN0aWZpZWRhcnQuY29tIiB9LAogICAgeyJhY2wiOiAicHVibGljLXJlYWQiIH0sCiAgICBbInN0YXJ0cy13aXRoIiwgIiRrZXkiLCAidXBsb2Fkcy8iXSwKICAgIFsic3RhcnRzLXdpdGgiLCAiJENvbnRlbnQtVHlwZSIsICJpbWFnZS8iXSwKICAgIFsiY29udGVudC1sZW5ndGgtcmFuZ2UiLCAwLCAyMDk3MTUyXQogIF0KfQo=" />
 					<input type="hidden" name="signature" value="LBkBk/GCeJ5uj0LlGrEpZLscvWI=" />
-					<input id="ImageFile1-1" name="file" type="file" />
-					<input onclick="submitImages();" name="submit" value="Upload" type="submit" />
+					Image for Artwork #3: <input id="ImageFile" name="file" type="file" />
+					<br/>
+					<input name="submit" value="Upload" type="submit" />
 				</form>
-				<form id="ImageForm1-2" action="http://justifiedart.com.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
-					<input id="ImageName1-2" type="hidden" name="key" value="uploads/${filename}" />
-					<input type="hidden" name="acl" value="public-read" />
-					<input type="hidden" name="content-type" value="image/jpeg" />
-					<input type="hidden" name="AWSAccessKeyId" value="AKIAJDKCZ5WM2D2SA7LA" />
-					<input type="hidden" name="policy" value="ewogICJleHBpcmF0aW9uIjogIjIwMTUtMDEtMDFUMTI6MDA6MDAuMDAwWiIsCiAgImNvbmRpdGlvbnMiOiBbCiAgICB7ImJ1Y2tldCI6ICJqdXN0aWZpZWRhcnQuY29tIiB9LAogICAgeyJhY2wiOiAicHVibGljLXJlYWQiIH0sCiAgICBbInN0YXJ0cy13aXRoIiwgIiRrZXkiLCAidXBsb2Fkcy8iXSwKICAgIFsic3RhcnRzLXdpdGgiLCAiJENvbnRlbnQtVHlwZSIsICJpbWFnZS8iXSwKICAgIFsiY29udGVudC1sZW5ndGgtcmFuZ2UiLCAwLCAyMDk3MTUyXQogIF0KfQo=" />
-					<input type="hidden" name="signature" value="LBkBk/GCeJ5uj0LlGrEpZLscvWI=" />
-					<input id="ImageFile1-2" name="file" type="file" />
-					<input onclick="submitImages();" name="submit" value="Upload" type="submit" />
-				</form>
-				<a href="javascript: submitImages()">Submit forms with JavaScript</A> 
 				
 				<!--HTML5 DnD uploader-->
 				<!--<article class="form-group">
