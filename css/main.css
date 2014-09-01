@@ -90,47 +90,43 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-<style type="text/css">
-		#intro { 
-			background: url(images/intro.png) 50% 0 fixed no-repeat; 
-			height: auto;  
-			margin: 0 auto; 
-		    width: 100%; 
-		    position: relative; 
-		    box-shadow: 0 0 50px rgba(0,0,0,0.8);
-		    padding: 100px 0;
-		    
-		    
-		   
-		}
-		#home { 
-			background: url(../img/Rotunda_ArchDetails_02.jpg) 50% 0 fixed no-repeat; 
-			background-color: #000000;
-			height: auto;  
-			margin: 0 auto; 
-		    width: auto; 
-		    position: relative; 
-		    padding: 200px 0;
-		} 
-		}
-		#home .container {
-			background-color: #000000;
-			color: #FFFFFF
-		}
-		#home h2 {
-			background-color: #000000;
-			color: #FFFFFF;
-		}
-		#about { 
-			background: url(images/about.png) 50% 0 fixed; 
-			height: auto;
-			margin: 0 auto; 
-		    width: 100%; 
-		    position: relative; 
-		    box-shadow: 0 0 50px rgba(0,0,0,0.8);
-		    padding: 100px 0;
-		    color: #fff;
-		}
+
+#intro { 
+	background: url(images/intro.png) 50% 0 fixed no-repeat; 
+	height: auto;  
+	margin: 0 auto; 
+    width: 100%; 
+    position: relative; 
+    padding: 100px 0;  
+}
+#home { 
+	background: url(../img/Rotunda_ArchDetails_02.jpg) 50% 0 fixed no-repeat; 
+	background-color: #000000;
+	height: auto;  
+	margin: 0 auto; 
+    width: auto; 
+    position: relative; 
+    padding: 200px 0;
+} 
+}
+#home .container {
+	background-color: #000000;
+	color: #FFFFFF
+}
+#home h2 {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+#about { 
+	background: url(images/about.png) 50% 0 fixed; 
+	height: auto;
+	margin: 0 auto; 
+    width: 100%; 
+    position: relative; 
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    padding: 100px 0;
+    color: #fff;
+}
 body{
 	font-family: 'Oswald', sans-serif;
 	font-weight:300;
@@ -138,7 +134,7 @@ body{
 	background-attachment:fixed;
 	width:100%;
 	padding-top: 50px;
-	
+	color:#DDD;
 }
 
 #justified-nav{
@@ -153,6 +149,9 @@ body{
   padding: 14px 10px;
   text-transform: uppercase;
 }
+.navbar-brand{
+	margin-top:-.4em;	
+}
 #header {
 	margin-top: 4em;
 }
@@ -161,14 +160,11 @@ body{
 	padding: 2em;
 }
 .hero-unit {
-	max-width: 450px;
-	margin-left: 15em ;
-    margin-right: auto ;
+	max-width: 900px;
+	margin:0 auto;
     color: black;
     background-color: white;
     padding: .5em;
-    margin-bottom: .5em;
-    margin-top: .5em;
     text-align: left;
    
 } 
@@ -199,34 +195,9 @@ body{
 	width:100%;
 
 }
-.triple-box-row a{
-	color:rgb(202,129,66);
-}
-.triple-box-row a:hover{
-	color:rgb(66,139,202);
-	text-decoration:none;
-}
-.triple-box-row h3 {
-	font-family: "Novecentowide-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
-	font-size: 1.15em;
-	letter-spacing: 1px;
-	color: #000000;
-	text-align: center;
-	padding-bottom: 1em;
-	margin-bottom: 2em;
-	border-bottom: 1px solid rgb(230, 230, 230);
-	text-transform: uppercase;
-	display: block;
-	opacity: 1.0;
-	
-}
-
-.triple-box-row {
-	margin-top:2em;
-	background-color: white;
-	border-radius: 10px;
-	padding-top: 2em;
-	padding-bottom:2em;
+.well{
+	background-image: linear-gradient(to bottom, #000 0px, #000 100%);
+	border-color:#000;
 }
 h3.step{
 	font-size:2em;
