@@ -99,15 +99,27 @@ textarea {
 		    position: relative; 
 		    box-shadow: 0 0 50px rgba(0,0,0,0.8);
 		    padding: 100px 0;
+		    
+		    
+		   
 		}
 		#home { 
-			background: url(../img/Rotunda_ArchDetails_02.jpg) 50% 0 fixed; 
+			background: url(../img/Rotunda_ArchDetails_02.jpg) 50% 0 fixed no-repeat; 
+			background-color: #000000;
 			height: auto;  
 			margin: 0 auto; 
 		    width: auto; 
 		    position: relative; 
-		    box-shadow: 0 0 50px rgba(0,0,0,0.8);
 		    padding: 200px 0;
+		} 
+		}
+		#home .container {
+			background-color: #000000;
+			color: #FFFFFF
+		}
+		#home h2 {
+			background-color: #000000;
+			color: #FFFFFF;
 		}
 		#about { 
 			background: url(images/about.png) 50% 0 fixed; 
@@ -126,6 +138,7 @@ body{
 	background-attachment:fixed;
 	width:100%;
 	padding-top: 50px;
+	
 }
 
 #justified-nav{
@@ -140,7 +153,31 @@ body{
   padding: 14px 10px;
   text-transform: uppercase;
 }
+#header {
+	margin-top: 4em;
+}
+#intro {
+	background-color: white;
+	padding: 2em;
+}
+.hero-unit {
+	max-width: 450px;
+	margin-left: 15em ;
+    margin-right: auto ;
+    color: black;
+    background-color: white;
+    padding: .5em;
+    margin-bottom: .5em;
+    margin-top: .5em;
+    text-align: left;
+   
+} 
 
+
+
+#home p {
+	background-color: black;
+}
 
 #titleRow{
 	margin: 10em;
@@ -155,7 +192,7 @@ body{
 .section-two, .section-four{
 	width:100%;
 	background-size:cover;
-	background-color:rgba(255,255,255,.8);
+	background-color: white;;
 }
 #section-two-container, #section-four-container{
 	opacity: 1.0;
@@ -173,7 +210,7 @@ body{
 	font-family: "Novecentowide-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
 	font-size: 1.15em;
 	letter-spacing: 1px;
-	color: rgb(85, 85, 85);
+	color: #000000;
 	text-align: center;
 	padding-bottom: 1em;
 	margin-bottom: 2em;
@@ -186,7 +223,7 @@ body{
 
 .triple-box-row {
 	margin-top:2em;
-	background-color: rgba(230, 230, 230, .9);
+	background-color: white;
 	border-radius: 10px;
 	padding-top: 2em;
 	padding-bottom:2em;
@@ -194,9 +231,13 @@ body{
 h3.step{
 	font-size:2em;
 }
+
+#submit-section {
+	background-color: #000000;
+}
 #footer {
     background: none repeat scroll 0% 0% #363839;
-    background-color: rgba(54, 56, 57, .9);
+    background-color: #000000;
     background-image: none;
     background-repeat: repeat;
     background-attachment: scroll;
@@ -235,7 +276,7 @@ h3.step{
 
 .section-heading h2, .section-closing h2 {
     font-size: 3em;
-    color: #FFAE3F;
+    color: #FFFFFF;
    }
 .section-heading p, .section-closing p{
     font-size: 1.5em;
@@ -299,7 +340,7 @@ progress:after { content: '%'; }
 #about-section-content{
 	margin-bottom:3em;
 	padding:2em;
-	background-color:rgba(255,255,255,.9);
+	background-color:black;
 	border-radius:10px;
 }
 /*
