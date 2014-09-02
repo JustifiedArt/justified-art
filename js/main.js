@@ -22,13 +22,19 @@ function submitImages(){
 		//window.alert("Submitting the first image, please click 'ok' to continue...");
 		$('ImageForm').submit();
 		
-		if(parseInt(imageNum)<3){
-			console.log(nextUrl);
-			//alert("Submitting for Artwork 1.  Click 'ok' to continue to Artwork number 2...");
-			setTimeout(function() {window.location= nextUrl; },1000);
-		}else{
-			console.log('thanks for your submission!');
-			setTimeout(function() {window.location.href="thankYou.html";});
+		switch(parseInt(imageNum)){
+			case 1:
+				setTimeout(function() {window.location.href= "submit.html"; },1000);
+				break;
+			case 2:
+				console.log(nextUrl);
+				//alert("Submitting for Artwork 1.  Click 'ok' to continue to Artwork number 2...");
+				setTimeout(function() {window.location= nextUrl; },1000);
+					break;
+			case 3:
+				console.log('thanks for your submission!');
+				setTimeout(function() {window.location.href="thankYou.html";});
+				break;
 		}
 	}
 }
@@ -66,10 +72,11 @@ var validateFile = function(sFileName, imageNum){
 var validateGoogleForm = function(){
 	var valid = true;
 	
-	var requiredArray = [0,1,36,2,13,15,8,21,43,45];
+	var requiredArray = [0,1,36,15,8,21,43,45];
 	
 	
 	for(i=0; i<requiredArray.length; i++){
+		console.log(requiredArray[i]);
 		var currentEntry = $('#'+'entry_'+requiredArray[i])[0].value;
 		
 		if(currentEntry.length===0){
@@ -90,6 +97,7 @@ var validateGoogleForm = function(){
 		var currentEntry = $('#'+'entry_'+requiredArray2[i])[0].value;
 		if(currentEntry.length>0){
 			artwork2 = true;
+			console.log("artwork 2 is being submitted");
 			break;
 		}
 	}
@@ -115,6 +123,7 @@ var validateGoogleForm = function(){
 		var currentEntry = $('#'+'entry_'+requiredArray3[i])[0].value;
 		if(currentEntry.length>0){
 			artwork3 = true;
+			console.log("artwork 3 is being submitted");
 			break;
 		}
 	}
@@ -136,7 +145,7 @@ var validateGoogleForm = function(){
 	
 	//for checkbox
 	var checkbox = $('#group_68_1')[0];
-	if(checkbox.checked!==true){
+	if(valid & checkbox.checked!==true){
 		alert('You must read and agree to the terms and conditions.');
 		return false;
 	}
