@@ -110,8 +110,8 @@ textarea {
 } 
 }
 #home .container {
-	background-color: #000000;
 	color: #FFFFFF
+	background:rgba(0,0,0,0.5);
 }
 #home h2 {
 	background-color: #000000;
