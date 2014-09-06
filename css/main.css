@@ -101,13 +101,17 @@ textarea {
 }
 #home { 
 	background: url(../img/Rotunda_ArchDetails_02.jpg) 50% 0 fixed no-repeat; 
-	background-color: #000000;
+	background-color: white;
+	background-size: auto 1200px;
 	height: auto;  
 	margin: 0 auto; 
     width: auto; 
     position: relative; 
     padding: 200px 0;
 } 
+#home .btn-success {
+	 background: #4E7CBE;
+	 border: #4E7CBE;
 }
 #home .container {
 	color: #FFFFFF
@@ -125,10 +129,10 @@ textarea {
     position: relative; 
     box-shadow: 0 0 50px rgba(0,0,0,0.8);
     padding: 100px 0;
-    color: #fff;
+    color: #000000;
 }
 body{
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Helvetica Neue', sans-serif;
 	font-weight:300;
 	background-size:100% 100%;
 	background-attachment:fixed;
@@ -196,7 +200,23 @@ body{
 #section-two-container, #section-four-container{
 	opacity: 1.0;
 	width:100%;
+	color: #000000;
+	
+}
+#section-four-container h2 {
+	color: black;
+	font-size:34pt;
+}
+}
+#jurors-section-container h2 {
+	color: #000000;
+}
+#jurors-section .team-member strong {
+	color: #4E7CBE;
+}
 
+#section-four-container img {
+	margin-right: 3em;
 }
 .well{
 	background-image: linear-gradient(to bottom, #000 0px, #000 100%);
@@ -208,6 +228,10 @@ h3.step{
 
 #submit-section {
 	background-color: #000000;
+	color: white; 
+}
+#submit-section h2 {
+	font-size:34pt; 
 }
 #footer {
     background: none repeat scroll 0% 0% #363839;
@@ -220,7 +244,7 @@ h3.step{
     background-origin: padding-box;
     background-size: auto auto;
     text-align: center;
-	color: #8C8989;
+	color: #ffffff;
 }
 .footer-column h3{
 	font-family: "Novecentowide-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -239,8 +263,11 @@ h3.step{
 	text-align: left;
 }
 #footer a:hover{
-	color:rgb(202,129,66);
+	color: white;
 	text-decoration:none;
+}
+#footer a {
+	color: #4E7CBE;
 }
 .empty-space{
 	height:200px;
@@ -316,6 +343,14 @@ progress:after { content: '%'; }
 	padding:2em;
 	background-color:black;
 	border-radius:10px;
+	color: #000000;
+}
+#about-section h2 {
+	color: #000000;
+	font-size:34pt;
+}
+#about-section p {
+	color: #000000;
 }
 /*
  * Jury Styles
