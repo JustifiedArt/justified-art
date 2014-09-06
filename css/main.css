@@ -90,6 +90,17 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+#about-section ul {
+	list-style-type: none;
+	color: black;
+}
+
+
+
+#submit-section ul
+{
+    list-style-type: none;
+}
 
 #intro { 
 	background: url(images/intro.png) 50% 0 fixed no-repeat; 
@@ -228,11 +239,32 @@ h3.step{
 
 #submit-section {
 	background-color: #000000;
-	color: white; 
+	color: white;
+	 
+}
+
+#submit-section a {
+	color: #4E7CBE;
+}
+#submit-section a:hover {
+	color: white;
+	text-decoration: none;
 }
 #submit-section h2 {
 	font-size:34pt; 
 }
+#submit-section table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    text-align: left;
+}
+th, td {
+    padding: 10px;
+}
+th {
+	text-align: left;
+}
+
 #footer {
     background: none repeat scroll 0% 0% #363839;
     background-color: #000000;
@@ -273,8 +305,9 @@ h3.step{
 	height:200px;
 	width:100%;
 }
-
-
+#footer input {
+	background-color: #4E7CBE;
+}
 .section-heading h2, .section-closing h2 {
     font-size: 3em;
     color: #FFFFFF;
