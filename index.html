@@ -51,9 +51,9 @@
 		   
 		      
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="about.html">About</a></li>
-		         <li><a href="submitImages1.html">Submit</a></li>
-		        <li><a href="jury.html">Jury</a></li>
+		        <li><a class="scroll" href="#about-anchor">About</a></li>
+		         <li><a class="scroll" href="#submit-anchor">Submit</a></li>
+		        <li><a class="scroll" href="#jury-anchor">Jury</a></li>
 		        
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
@@ -93,17 +93,17 @@
 		        <div class="span4 well text-center">
 		          <h2>ABOUT THE SHOW</h2>
 		          <br><br>
-		          <p><a class="btn btn-success" href="about.html">ABOUT &raquo;</a></p>
+		          <p><a class="btn btn-success scroll" href="#about-anchor">ABOUT &raquo;</a></p>
 		        </div><!-- /.span4 -->
 		        <div class="span4 well text-center">
 		          <h2>SUBMIT YOUR WORK</h2>
 		          <br><br>
-		          <p><a class="btn btn-success" href="submitImages1.html">SUBMIT &raquo;</a></p>
+		          <p><a class="btn btn-success scroll" href="#submit-anchor">SUBMIT &raquo;</a></p>
 		        </div><!-- /.span4 -->
 		        <div class="span4 well text-center">
 		          <h2>MEET THE JURY</h2>
 		          <br><br>
-		          <p><a class="btn btn-success" href="jury.html">JURY &raquo;</a></p></span>
+		          <p><a class="btn btn-success scroll" href="#jury-anchor">JURY &raquo;</a></p>
 		        </div><!-- /.span4 -->
 	    	</div>
 	    </div>
@@ -112,9 +112,9 @@
 	<!-- About section -->
 	<div id="about-section" class="section about">
 			<div class="container">
-		        <div class="section-heading">
+		        <div class="section-heading"><a id="about-anchor"></a>
 		        	<br><br><br>
-		           <br><br> <h2><strong>About</strong></h2><br><br>
+		           <br><br><h2><strong>About</strong></h2><br><br>
 		        </div>
 		        			<ul><em>Justified Art!</em> is a platform for visual artists to participate in the conversation 
 		        				inspired by "Justified Anger", a Cap Times essay by Rev. Alex Gee detailing his personal 
@@ -153,35 +153,37 @@
 		<!-- Submit section -->
 		<div id="submit-section" class="section submit">
 			<div class="container">
-		        <div class="section-heading">
+		        <div class="section-heading"><a id="submit-anchor"></a>
 		        	<br><br><br><br><br>
 		            <h2>Submit your work</h2>
 		        </div>
 		        
-		        <ul><p><br>1. Read the Submission Guidelines (view/download PDF). 
-		        	<br>2. Ensure that images of all artwork you plan to submit for jury meet the formatting requirements: 
-		        <br><br>
-		        
-		        <ul><table style="width:auto">
-					  <tr>
-					  	<th colspan="2">Image Requirements</th>
-					  </tr>
-					  <tr>
-					    <td>Image size</td>
-					    <td>minimum width 620px</td>		
-					  </tr>
-					  <tr>
-					    <td>File type</td>
-					    <td>JPEG (.jpg) only</td>		
-					  </tr>
-					  <tr>
-					    <td>File size limit</td>
-					    <td>maximum 2mb per image</td>		
-					  </tr>
-					</table>
-</ul><br>
-
-<br>3. <a href="submitImages1.html">Submit your work.</a></ul><br><br><br><br>
+		        <ol style="font-size:1.5rem;">
+		        	<br/>
+		        	<li>Read the Submission Guidelines (<a href="">view/download PDF</a>)</li>
+		        	<br/>
+		        	<li>Ensure that all images of artwork meet the formatting requirements:
+		        		<br/><br/>
+			        	<table class="table" style="width:auto">
+						  <tr>
+						  	<th colspan="2">Image Requirements</th>
+						  </tr>
+						  <tr>
+						    <td>Image size</td>
+						    <td>At least 620px width</td>		
+						  </tr>
+						  <tr>
+						    <td>File type</td>
+						    <td>.jpg (JPEG) or .png</td>		
+						  </tr>
+						  <tr>
+						    <td>File size</td>
+						    <td>Less than 2MB</td>		
+						  </tr>
+						</table>
+					</li>
+					<li><a href="submitImages1.html">Submit your work</a></li>
+				</ol><br><br><br><br>
 
 
 
@@ -199,7 +201,7 @@
 			<div id="section-four-container">
 				<div id="jurors-section" class="section jurors">
 					<div class="container">
-				        <div class="section-heading">
+				        <div class="section-heading"><a id="jury-anchor"></a>
 				        	<br><br><br><br><br>
 				            <h2><strong>Jury</strong></h2><br>
 				          
@@ -288,10 +290,12 @@ In 1978, I received an associate’s degree in commercial art and illustration f
 		                    <br><br>
 		                    <h3>Newsletter</h3>
 		                    <p class="margin-btm20">Join the Justified Art! newsletter to be notified about the Call for Entries, events and important updates:</p>
-		                    <p><form action="http://groups.google.com/group/justified-art-newsletter/boxsubscribe">
-      Email:
-      <input type="text" name="email">
-      <input type="submit" name="sub" value="Submit"></form></p>
+		                    <p><form class="form-inline" action="http://groups.google.com/group/justified-art-newsletter/boxsubscribe">
+						      <div class="form-group">
+						      <label for="email-signup">Email:</label>
+						      <input class="form-control" id="email-signup" type="text" name="email">
+						      <input class="btn btn-primary" type="submit" name="sub" value="Submit"></form></p>
+						      </div>
 		                </div>
 		                <!--
 		
@@ -318,30 +322,15 @@ In 1978, I received an associate’s degree in commercial art and illustration f
 		                      <li><i class="ion-ios7-email">
 		                    </ul>
 		                    <ul class="list-unstyled list-inline social">
-		                        <li>
-		                            <a href="#">
-		                                <i class="ion-social-facebook-outline" data-original-title="Like On Facebook" title="" data-placement="top" data-toggle="tooltip"></i>
-		                            </a>
+		                        <li><a href="#"><i class="ion-social-facebook-outline" data-original-title="Like On Facebook" title="" data-placement="top" data-toggle="tooltip"></i></a>
 		                        </li>
-		                        <li>
-		                            <a href="#">
-		                                <i class="ion-social-twitter-outline" data-original-title="Follow On twitter" title="" data-placement="top" data-toggle="tooltip"></i>
-		                            </a>
+		                        <li><a href="#"><i class="ion-social-twitter-outline" data-original-title="Follow On twitter" title="" data-placement="top" data-toggle="tooltip"></i></a>
 		                        </li>
-		                        <li>
-		                            <a href="#">
-		                                <i class="ion-social-googleplus-outline" data-original-title="Follow On googleplus" title="" data-placement="top" data-toggle="tooltip"></i>
-		                            </a>
+		                        <li><a href="#"><i class="ion-social-googleplus-outline" data-original-title="Follow On googleplus" title="" data-placement="top" data-toggle="tooltip"></i></a>
 		                        </li>
-		                        <li>
-		                            <a href="#">
-		                                <i class="ion-social-pinterest-outline" data-original-title="pinterest" title="" data-placement="top" data-toggle="tooltip"></i>
-		                            </a>
+		                        <li><a href="#"><i class="ion-social-pinterest-outline" data-original-title="pinterest" title="" data-placement="top" data-toggle="tooltip"></i></a>
 		                        </li>
-		                        <li>
-		                            <a href="#">
-		                                <i class="ion-social-skype-outline" data-original-title="skype" title="" data-placement="top" data-toggle="tooltip"></i>
-		                            </a>
+		                        <li><a href="#"><i class="ion-social-skype-outline" data-original-title="skype" title="" data-placement="top" data-toggle="tooltip"></i></a>
 		                        </li>
 		                    </ul>
 		                </div>
