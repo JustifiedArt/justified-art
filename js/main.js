@@ -14,8 +14,8 @@ function submitImages(){
 		unselected = true;
 		alert('Please choose an option from the list to continue.');
 	}
-	var imageNum = url.substr(url.search("submitImages")+12);
-	var nextImageNum = selectedNext.substr(url.search("submitImages")+12);
+	var imageNum = url.substr(url.search("submitImages")+12, url.search(".html"));
+	var nextImageNum = selectedNext.substr(selectedNext.search("submitImages")+12);
 	var nextUrl = selectedNext + '.html';
 	
 	var sFileName1 = $('#ImageFile')[0].value;
@@ -28,7 +28,6 @@ function submitImages(){
 		//window.alert("Submitting the first image, please click 'ok' to continue...");
 		$('ImageForm').submit();
 		
-		console.log(nextUrl);
 		//alert("Submitting for Artwork 1.  Click 'ok' to continue to Artwork number 2...");
 		setTimeout(function() {window.location= nextUrl; },1000);
 	}
