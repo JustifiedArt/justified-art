@@ -8,35 +8,31 @@ var validFiles = ['jpeg', 'png', 'jpg'];
 
 function submitImages(){
 	var url = document.URL;
-	var imageNum = url.substr(url.search("submitImages")+12, 1);
-	var nextImageNum = parseInt(imageNum) + 1;
-	var nextUrl = 'submitImages' + nextImageNum + '.html';
+	var selectedNext = $('input[type=radio]:checked').val();
+	var unselected = false;
+	if(selectedNext === undefined){
+		unselected = true;
+		alert('Please choose an option from the list to continue.');
+	}
+	var imageNum = url.substr(url.search("submitImages")+12);
+	var nextImageNum = selectedNext.substr(url.search("submitImages")+12);
+	var nextUrl = selectedNext + '.html';
 	
 	var sFileName1 = $('#ImageFile')[0].value;
 	
 	fileValid = validateFile(sFileName1, imageNum);
 	
-	if(fileValid!==false){
+	if(!unselected & fileValid!==false){
 		console.log("submitting " + fileValid);
 		$('#ImageName')[0].value = fileValid;
 		//window.alert("Submitting the first image, please click 'ok' to continue...");
 		$('ImageForm').submit();
 		
-		switch(parseInt(imageNum)){
-			case 1:
-				setTimeout(function() {window.location.href= "submit.html"; },1000);
-				break;
-			case 2:
-				console.log(nextUrl);
-				//alert("Submitting for Artwork 1.  Click 'ok' to continue to Artwork number 2...");
-				setTimeout(function() {window.location= nextUrl; },1000);
-					break;
-			case 3:
-				console.log('thanks for your submission!');
-				setTimeout(function() {window.location.href="thankYou.html";});
-				break;
-		}
+		console.log(nextUrl);
+		//alert("Submitting for Artwork 1.  Click 'ok' to continue to Artwork number 2...");
+		setTimeout(function() {window.location= nextUrl; },1000);
 	}
+	
 }
 var validateFile = function(sFileName, imageNum){
 	console.log(sFileName);
@@ -61,7 +57,7 @@ var validateFile = function(sFileName, imageNum){
 	    }
 		else{
 			return "uploads/" + lastName + firstName + imageNum + "." + sCurExtension;
-			console.log("uploads/" + lastName + firstName + "." + sCurExtension);
+			console.log("uploads/" + lastName + firstName + imageNum + "." + sCurExtension);
 		}
 	}
 	else{
@@ -72,7 +68,7 @@ var validateFile = function(sFileName, imageNum){
 var validateGoogleForm = function(){
 	var valid = true;
 	
-	var requiredArray = [0,1,36,15,8,21,43,45];
+	var requiredArray = [0,1,15,8,21,43,45];
 	
 	
 	for(i=0; i<requiredArray.length; i++){
