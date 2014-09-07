@@ -42,6 +42,16 @@ function submitImages(){
 }
 var validateFile = function(sFileName, imageNum){
 	console.log(sFileName);
+	
+	var today = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+1; //January is 0!
+	var yyyy = today.getFullYear();
+	
+	if(dd<10) {dd='0'+dd;}
+	if(mm<10) {mm='0'+mm;}
+	today = yyyy+'_'+mm+'_'+dd+'_';
+	
 	var firstName = formatText($('#firstName')[0].value);
 	var lastName = formatText($('#lastName')[0].value);
 	if(firstName.length!==0 || lastName.length!==0){
@@ -62,8 +72,8 @@ var validateFile = function(sFileName, imageNum){
 	        return false;
 	    }
 		else{
-			return "uploads/" + lastName + firstName + imageNum + "." + sCurExtension;
-			console.log("uploads/" + lastName + firstName + imageNum + "." + sCurExtension);
+			return "uploads/" + today + lastName + firstName + imageNum + "." + sCurExtension;
+			console.log("uploads/" + today + lastName + firstName + imageNum + "." + sCurExtension);
 		}
 	}
 	else{
