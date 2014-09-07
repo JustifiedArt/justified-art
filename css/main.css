@@ -100,7 +100,14 @@ textarea {
 #submit-section ul
 {
     list-style-type: none;
+    font-size:xx-large;
 }
+#submit-section p
+{
+    list-style-type: none;
+    font-size:xx-large;
+}
+
 
 #intro { 
 	background: url(images/intro.png) 50% 0 fixed no-repeat; 
@@ -402,6 +409,11 @@ progress:after { content: '%'; }
 }
 #about-section p {
 	color: #000000;
+	font-size:small;
+}
+
+#about-section ul {
+	font-size:xx-large;
 }
 /*
  * Jury Styles
