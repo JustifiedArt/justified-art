@@ -96,16 +96,21 @@ textarea {
 }
 
 
-
+#submit-section a{
+	font-size:x-large;
+}
+#submit-section table{
+	font-size:medium;
+}
 #submit-section ul
 {
     list-style-type: none;
-    font-size:xx-large;
+    font-size:x-large;
 }
 #submit-section p
 {
     list-style-type: none;
-    font-size:xx-large;
+    font-size:x-large;
 }
 
 
@@ -228,10 +233,23 @@ body{
 #jurors-section-container h2 {
 	color: #000000;
 }
-#jurors-section .team-member strong {
-	color: #4E7CBE;
+#jurors-section h3 {
+	color: #000000;
+	font-size:xx-large;
 }
 
+#jurors-section p {
+	color: #000000;
+	font-size:normal;
+}
+#jurors-section .team-member strong {
+	color: #4E7CBE;
+	font-size:medium;
+}
+#jurors-section .team-member p strong {
+	color: black;
+	font-size:medium;
+}
 #section-four-container img {
 	margin-right: 3em;
 }
@@ -251,6 +269,10 @@ h3.step{
 
 #submit-section a {
 	color: #4E7CBE;
+}
+
+#submit-section p {
+	line-height:200%;
 }
 #submit-section a:hover {
 	color: white;
@@ -413,7 +435,7 @@ progress:after { content: '%'; }
 }
 
 #about-section ul {
-	font-size:xx-large;
+	font-size:x-large;
 }
 /*
  * Jury Styles
