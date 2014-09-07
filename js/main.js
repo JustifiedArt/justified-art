@@ -1,3 +1,10 @@
+jQuery(document).ready(function($) {
+	$(".scroll").click(function(event){		
+		event.preventDefault();
+		$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+	});
+});
+
 //form validation script
 var formatText = function(text){
 	var tempText = text.toLowerCase().replace(' ', '');
@@ -14,7 +21,7 @@ function submitImages(){
 		unselected = true;
 		alert('Please choose an option from the list to continue.');
 	}
-	var imageNum = url.substr(url.search("submitImages")+12, url.search(".html"));
+	var imageNum = url.substr(url.search("submitImages")+12, url.search('.html') - url.search("submitImages")-12);
 	var nextImageNum = selectedNext.substr(selectedNext.search("submitImages")+12);
 	var nextUrl = selectedNext + '.html';
 	
