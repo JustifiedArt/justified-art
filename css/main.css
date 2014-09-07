@@ -391,6 +391,9 @@ progress:after { content: '%'; }
 /*
  * Other Submission page styles
  */
+.form-notes{
+	font-weight:normal;
+}
 #ImageForm{
 	margin-left:1em;	
 }
