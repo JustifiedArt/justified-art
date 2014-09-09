@@ -18,13 +18,13 @@
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 		
 		<link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.0.min.js"></script>
 		<!-- Bootstrap resources-->
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 		<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
 		
+        <link rel="stylesheet" href="css/main.css">
 	</head>
 
 	<body>
@@ -45,9 +45,9 @@
 		   
 		      
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="#">Submit</a></li>
-		        <li><a href="jury.html">Jury</a></li>
-		        <li><a href="about.html">About</a></li>
+		        <li><a class="scroll" href="index.html#about-anchor">About</a></li>
+		        <li><a class="scroll" href="index.html#submit-anchor">Submit</a></li>
+		        <li><a class="scroll" href="index.html#jury-anchor">Jury</a></li>
 		        
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
@@ -59,14 +59,25 @@
 			
 			<div id="form-container">
 				<h4>Artwork #3</h4>
-				<p>Almost done!  Submit at least one image for each entry and we will get back to you by MONTH, DAY with the decisions.</p>
-				<p>Each image must be JPEG format and less than 2MB each in size.</p>
+				<p>Submit an image of your third work of art here.</p>
 				<br/>
-				<p>If you are not submitting a third piece, <a href="index.html">click here</a> to return to the <a href="index.html">Justified Art!</a> home page</p>
-				<br/>
-				First Name: <input type="text" name="firstName" id="firstName" value="">
-				Last Name: <input type="text" name="lastName" id="lastName" value="">
-				<br/><br/>
+				<div class="row">
+				<div class="guidelines col-md-4 col-md-push-8 ">
+					<div class="guidelines-title">Image Formatting Specifications</div>
+					<div class="guidelines-content">
+						<ul style="padding-left:0; list-style-type:none;">
+							<li>Image Size: At least 620px wide</li>
+							<li>File Size: Less than 2MB per image</li>
+							<li>File Type: JPEG or PNG</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-8 col-md-pull-4">
+					<div class="row">
+						<div class="col-md-6">First Name: <input type="text" name="firstName" id="firstName" value=""></div>
+						<div class="col-md-6">Last Name: <input type="text" name="lastName" id="lastName" value=""></div>
+					</div>
+					<br/>
 				<form onsubmit="return(submitImages());" id="ImageForm" action="http://justifiedart.com.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
 					<input id="ImageName" type="hidden" name="key" value="uploads/${filename}" />
 					<input type="hidden" name="acl" value="public-read" />
@@ -74,9 +85,16 @@
 					<input type="hidden" name="AWSAccessKeyId" value="AKIAJDKCZ5WM2D2SA7LA" />
 					<input type="hidden" name="policy" value="ewogICJleHBpcmF0aW9uIjogIjIwMTUtMDEtMDFUMTI6MDA6MDAuMDAwWiIsCiAgImNvbmRpdGlvbnMiOiBbCiAgICB7ImJ1Y2tldCI6ICJqdXN0aWZpZWRhcnQuY29tIiB9LAogICAgeyJhY2wiOiAicHVibGljLXJlYWQiIH0sCiAgICBbInN0YXJ0cy13aXRoIiwgIiRrZXkiLCAidXBsb2Fkcy8iXSwKICAgIFsic3RhcnRzLXdpdGgiLCAiJENvbnRlbnQtVHlwZSIsICJpbWFnZS8iXSwKICAgIFsiY29udGVudC1sZW5ndGgtcmFuZ2UiLCAwLCAyMDk3MTUyXQogIF0KfQo=" />
 					<input type="hidden" name="signature" value="LBkBk/GCeJ5uj0LlGrEpZLscvWI=" />
-					Image for Artwork #3: <input id="ImageFile" name="file" type="file" />
-					<br/>
-					<input name="submit" value="Upload" type="submit" />
+					<div class="row">Image for Artwork #3: <input style="display:inline-block;" id="ImageFile" name="file" type="file" /></div>
+					<div class="row" style="padding-top:1em;">
+						<div><label class="ss-q-title" for="entry_36">I would like to...</label>
+						<ul style="list-style-type:none;" class="ss-choices">
+							<li><label class="ss-choice-label"><input type="radio" name="entry.36.group" value="submitImages3-2">Submit more images of <em>this</em> artwork <span class="form-notes">(optional)</span> </label></li>
+							<li><label class="ss-choice-label"><input type="radio" name="entry.36.group" value="submit">Finish my submission</label></li>
+						</ul>
+						</div>
+					</div>
+					<input class="btn btn-success" name="submit" value="Upload" type="submit" />
 				</form>
 				
 				<!--HTML5 DnD uploader-->
@@ -90,84 +108,80 @@
 				  <p>Upload progress: <progress id="uploadprogress" min="0" max="100" value="0">0</progress></p>
 				  <label for="holder">Drag an image from your desktop on to the drop zone above to see the browser both render the preview, but also upload automatically to this server.</label>
 				</article>-->
-				
+				</div>
+				</div>
 			</div>
 		</div>
 	
 		<div class="empty-space"></div>
 		
 		<!-- End content Area -->
-		<section id="footer" class="padding-60">
+			<section id="footer" class="padding-60">
 		
 		    <div class="container">
 		        <div class="row">
 		            <div class="col-md-4 margin-btm20">
 		                <div class="footer-column">
+		                    <br><br>
 		                    <h3>Newsletter</h3>
-		                    <p class="margin-btm20">Join the Justified Art! newsletter to be notified about the Call for Entries, events and for important updates.</p>
+		                    <p class="margin-btm20">Join the Justified Art! newsletter to be notified about the Call for Entries, events and important updates:</p>
+		                    <p><form class="form-inline" action="http://groups.google.com/group/justified-art-newsletter/boxsubscribe">
+						      <div class="form-group">
+						      <label for="email-signup">Email:</label>
+						      <input class="form-control" id="email-signup" type="text" name="email">
+						      <input class="btn btn-primary" type="submit" name="sub" value="Submit"></form></p>
+						      </div>
+		                </div>
+		                <!--
+		
+		                footer columns end
+		
+		                -->
+		            </div>
+		            <div class="col-md-4 margin-btm20">
+		                <div class="footer-column">
+		                	<br><br>
+		                    <h3>Resources</h3>
+		                    <p><a  href="http://host.madison.com/news/local/city-life/justified-anger-rev-alex-gee-says-madison-is-failing-its/article_14f6126c-fc1c-55aa-a6a3-6c3d00a4424c.html">"Justified Anger" essay by Rev. Alex Gee</a>
+		                    <br><a  href="http://www.madisonjustifiedanger.com">Justified Anger website</a>
+		                    <br><a  href="http://host.madison.com/ct/topics/race-in-madison/#utm_source=host.madison.com&utm_campaign=hot-topics-2&utm_medium=direct">The Cap Times: Together Apart</a>
+		                    <br><a  href="http://racetoequity.net/dev/wp-content/uploads/WCCF-R2E-Report.pdf">Race to Equity Report</a></p>
 		                </div>
 		                <!--footer columns end-->
 		            </div>
 		            <div class="col-md-4 margin-btm20">
 		                <div class="footer-column">
-		                    <h3>Links</h3>
-		                    <ul class="list-unstyled post-list">
-		                        <li><a  href="#">Blog slide post</a></li>
-		                        <li><a  href="#">Lorem ipsum dollor</a></li>
-		                        <li><a  href="#">Blog image post</a></li>
-		                        <li><a  href="#">Blog Video post</a></li>
-		                        <li><a  href="#">Lorem ipsum dollor</a></li>
-		                    </ul>
-		                </div>
-		                <!--footer columns end-->
-		            </div>
-		            <div class="col-md-4 margin-btm20">
-		                <div class="footer-column">
-		                    <h3>Contact</h3>
+		                	<br><br>
+		                    <h3>Contact</h3><p><a href="mailto:info@justifiedart.com">info@justifiedart.com</a></p>
 		                    <ul class="list-unstyled contact-list margin-btm20">
-		                      <li><i class="ion-ios7-email"></i><strong>Email:</strong>info@justifiedart.com</li>
+		                      <li><i class="ion-ios7-email">
 		                    </ul>
 		                    <ul class="list-unstyled list-inline social">
-		                        <li>
-		                            <a href="#">
-		                                <i class="ion-social-facebook-outline" data-original-title="Like On Facebook" title="" data-placement="top" data-toggle="tooltip"></i>
-		                            </a>
+		                        <li><a href="#"><i class="ion-social-facebook-outline" data-original-title="Like On Facebook" title="" data-placement="top" data-toggle="tooltip"></i></a>
 		                        </li>
-		                        <li>
-		                            <a href="#">
-		                                <i class="ion-social-twitter-outline" data-original-title="Follow On twitter" title="" data-placement="top" data-toggle="tooltip"></i>
-		                            </a>
+		                        <li><a href="#"><i class="ion-social-twitter-outline" data-original-title="Follow On twitter" title="" data-placement="top" data-toggle="tooltip"></i></a>
 		                        </li>
-		                        <li>
-		                            <a href="#">
-		                                <i class="ion-social-googleplus-outline" data-original-title="Follow On googleplus" title="" data-placement="top" data-toggle="tooltip"></i>
-		                            </a>
+		                        <li><a href="#"><i class="ion-social-googleplus-outline" data-original-title="Follow On googleplus" title="" data-placement="top" data-toggle="tooltip"></i></a>
 		                        </li>
-		                        <li>
-		                            <a href="#">
-		                                <i class="ion-social-pinterest-outline" data-original-title="pinterest" title="" data-placement="top" data-toggle="tooltip"></i>
-		                            </a>
+		                        <li><a href="#"><i class="ion-social-pinterest-outline" data-original-title="pinterest" title="" data-placement="top" data-toggle="tooltip"></i></a>
 		                        </li>
-		                        <li>
-		                            <a href="#">
-		                                <i class="ion-social-skype-outline" data-original-title="skype" title="" data-placement="top" data-toggle="tooltip"></i>
-		                            </a>
+		                        <li><a href="#"><i class="ion-social-skype-outline" data-original-title="skype" title="" data-placement="top" data-toggle="tooltip"></i></a>
 		                        </li>
 		                    </ul>
 		                </div>
 		                <!--footer columns end -->
 		            </div>
 		        </div>
-		        <!--row end-->
+		        <!--row end--><br><br><br><br><br><br><br>
 		        <div class="divied-40"></div>
 		        <div class="row">
 		            <div class="col-md-12 text-center margin-btm20">
 		                <a href="index.html">
-		                    <img height="40px" src="img/logo-white.png"></img>
 		                </a>
 		            </div>
 		            <div class="col-md-12 text-center">
-		                <span>© Copyright 2014. All rights reserved.</span>
+		                <span><img src="img/justified-art-logo-white-trans.png" width="180em"><p>© 2014</p></span>
+		                <br>
 		            </div>
 		        </div>
 		    </div>
