@@ -97,20 +97,20 @@ textarea {
 
 
 #submit-section a{
-	font-size:x-large;
+	font-size:medium;
 }
 #submit-section table{
 	font-size:medium;
+	margin-bottom:2.25em;
 }
 #submit-section ul
 {
     list-style-type: none;
-    font-size:x-large;
+    font-size:medium;
 }
-#submit-section p
-{
+#submit-section p{
     list-style-type: none;
-    font-size:x-large;
+    font-size:medium;
 }
 
 
@@ -131,7 +131,7 @@ textarea {
     width: auto; 
     position: relative; 
     padding: 200px 0;
-} 
+}
 #home .btn-success {
 	 background: #4E7CBE;
 	 border: #4E7CBE;
@@ -187,7 +187,7 @@ body{
 	margin-top:-.4em;	
 }
 #header {
-	margin-top: 4em;
+	margin-top: 2em;
 }
 #intro {
 	background-color: white;
@@ -232,7 +232,7 @@ body{
 }
 #section-four-container h2 {
 	color: black;
-	font-size:34pt;
+	font-size:xx-large;
 }
 }
 #jurors-section-container h2 {
@@ -240,12 +240,12 @@ body{
 }
 #jurors-section h3 {
 	color: #000000;
-	font-size:xx-large;
+	font-size:x-large;
 }
 
 #jurors-section p {
 	color: #000000;
-	font-size:normal;
+	font-size:medium;
 }
 #jurors-section .team-member strong {
 	color: #4E7CBE;
@@ -284,7 +284,11 @@ h3.step{
 	text-decoration: none;
 }
 #submit-section h2 {
-	font-size:34pt; 
+	font-size:xx-large; 
+}
+
+#submit-section li {
+	font-size:medium; 
 }
 #submit-section table, th, td {
     border: 1px solid white;
@@ -432,17 +436,18 @@ progress:after { content: '%'; }
 	border-radius:10px;
 	color: #000000;
 }
+
+#about-section a:hover {
+	text-decoration: none;
+}
+
 #about-section h2 {
 	color: #000000;
-	font-size:34pt;
+	font-size:xx-large;
 }
 #about-section p {
 	color: #000000;
-	font-size:small;
-}
-
-#about-section ul {
-	font-size:x-large;
+	font-size:medium;
 }
 /*
  * Jury Styles
