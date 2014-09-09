@@ -397,6 +397,10 @@ progress:after { content: '%'; }
 .form-section h4{
 	line-height:1.4em;
 }
+.help-block{
+	font-size:1rem;
+	font-weight:normal;
+}
 /*
  * Other Submission page styles
  */

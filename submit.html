@@ -63,7 +63,7 @@
 			<div class="ss-form">
 			<script type="text/javascript">var submitted=false;</script>
 			<iframe name="submitImage_iframe" id="submitImage_iframe" style="display:none;" onload="if(submitted) {window.location='thankYou.html';}"></iframe>
-			<form onsubmit="submitted=validateGoogleForm();" target="submitImage_iframe" action="https://docs.google.com/spreadsheet/formResponse?formkey=dEF5T1FCSXRBbkZzY0tySEpGUWs3V1E6MA&amp;embedded=true&amp;ifq" method="POST" id="ss-form">
+			<form class="form-inline" onsubmit="submitted=validateGoogleForm();" target="submitImage_iframe" action="https://docs.google.com/spreadsheet/formResponse?formkey=dEF5T1FCSXRBbkZzY0tySEpGUWs3V1E6MA&amp;embedded=true&amp;ifq" method="POST" id="ss-form">
 			
 			
 			<br>
@@ -74,18 +74,18 @@
 			<br> <div class="errorbox-good">
 			<div class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_0">First Name
 			<span class="ss-required-asterisk">*</span></label>
-			<label class="ss-q-help" for="entry_0"></label>
-			<input type="text" name="entry.0.single" value="" class="ss-q-short" id="entry_0"></div></div></div>
+			<label class="help-block" for="entry_0"></label>
+			<input type="text" name="entry.0.single" value="" class="form-control" id="entry_0"></div></div></div>
 			<br> <div class="errorbox-good">
 			<div class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_1">Last Name
 			<span class="ss-required-asterisk">*</span></label>
-			<label class="ss-q-help" for="entry_1"></label>
-			<input type="text" name="entry.1.single" value="" class="form-control ss-q-short" id="entry_1"></div></div></div>
+			<label class="help-block" for="entry_1"></label>
+			<input type="text" name="entry.1.single" value="" class="form-control" id="entry_1"></div></div></div>
 			<br><br/> 
 			<div class="form-group errorbox-good">
 			<div class="ss-item  ss-checkbox"><div class="ss-form-entry"><label class="ss-q-title" for="entry_36">Special Consideration will be given to the following groups, please check all that apply
 			</label>
-			<label class="ss-q-help" for="entry_36"></label>
+			<label class="help-block" for="entry_36"></label>
 			<ul style="list-style-type:none;" class="ss-choices"><li class="ss-choice-item"><label class="ss-choice-label"><input type="checkbox" name="entry.36.group" value="Dane County Resident" class="ss-q-checkbox" id="group_36_1">
 			Dane County Resident</label></li> <li class="ss-choice-item"><label class="ss-choice-label"><input type="checkbox" name="entry.36.group" value="Artist of Color" class="ss-q-checkbox" id="group_36_2">
 			Artist of Color</label></li> <li class="ss-choice-item"><label class="ss-choice-label"><input type="checkbox" name="entry.36.group" value="African American Artist" class="ss-q-checkbox" id="group_36_3">
@@ -95,16 +95,16 @@
 			<br> <div class="errorbox-good">
 			<div class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_15">E-mail
 			<span class="ss-required-asterisk">*</span></label>
-			<label class="ss-q-help" for="entry_15"></label>
-			<input type="text" name="entry.15.single" value="" class="ss-q-short" id="entry_15"></div></div></div>
+			<label class="help-block" for="entry_15"></label>
+			<input type="text" name="entry.15.single" value="" class="form-control" id="entry_15"></div></div></div>
 			<br> <div class="errorbox-good">
 			<div class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_4">Phone Number
 			</label>
-			<label class="ss-q-help" for="entry_4">We will only use your phone number in case we need to get in touch with  you and are unable to by email.</label>
-			<input type="text" name="entry.4.single" value="" class="ss-q-short" id="entry_4"></div></div></div>
+			<label class="help-block" for="entry_4">We will only use your phone number in case we need to get in touch with  you and are unable to by email.</label>
+			<input type="text" name="entry.4.single" value="" class="form-control" id="entry_4"></div></div></div>
 			<br> <div class="errorbox-good">
 			<div class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">Upload Your Work</h2>
-			<div class="ss-section-description ss-no-ignore-whitespace">You may submit up to three works of art, and for each work you may submit up to three images. Please note that a brief description of each artwork is required in order to be considered for selection by the jury. All images must be in JPEG (.jpg) format only. In the event that the proposed work has not yet been produced, please provide a detailed description of the intent with supporting images of past work. Check to make sure that your images are formatted and named correctly before filling out this form by reading the instructions under Image Formatting Specifications below. </div>
+			<div class="ss-section-description ss-no-ignore-whitespace">Please note that a brief description of the artwork is required in order to be considered for selection by the jury. In the event that the proposed work has not yet been produced, please provide a detailed description of the intent with supporting images of past work. </div>
 			</div></div></div>
 			<br> <div class="errorbox-good">
 			<div class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">Artwork 1</h2>
@@ -113,56 +113,57 @@
 			<br> <div class="errorbox-good">
 			<div class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_8">Title
 			<span class="ss-required-asterisk">*</span></label>
-			<label class="ss-q-help" for="entry_8"></label>
-			<input type="text" name="entry.8.single" value="" class="ss-q-short" id="entry_8"></div></div></div>
+			<label class="help-block" for="entry_8"></label>
+			<input type="text" name="entry.8.single" value="" class="form-control" id="entry_8"></div></div></div>
 			<br> <div class="errorbox-good">
 			<div class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_21">Media
 			<span class="ss-required-asterisk">*</span></label>
-			<label class="ss-q-help" for="entry_21"></label>
-			<input type="text" name="entry.21.single" value="" class="ss-q-short" id="entry_21"></div></div></div>
+			<label class="help-block" for="entry_21"></label>
+			<input type="text" name="entry.21.single" value="" class="form-control" id="entry_21"></div></div></div>
 			<br> <div class="errorbox-good">
 			<div class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_43">Year Created
 			<span class="ss-required-asterisk">*</span></label>
-			<label class="ss-q-help" for="entry_43"></label>
-			<input type="text" name="entry.43.single" value="" class="ss-q-short" id="entry_43"></div></div></div>
+			<label class="help-block" for="entry_43"></label>
+			<input type="text" name="entry.43.single" value="" class="form-control" id="entry_43"></div></div></div>
 			<br> <div class="errorbox-good">
 			<div class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_19">Dimensions
 			</label>
-			<label class="ss-q-help" for="entry_19">(H x W x D in inches)</label>
-			<input type="text" name="entry.19.single" value="" class="ss-q-short" id="entry_19"></div></div></div>
+			<label class="help-block" for="entry_19">(H x W x D in inches)</label>
+			<input type="text" name="entry.19.single" value="" class="form-control" id="entry_19"></div></div></div>
 			<br> <div class="errorbox-good">
 			<div class="ss-item ss-item-required ss-paragraph-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_45">Description of Work
 			<span class="ss-required-asterisk">*</span></label>
-			<label class="ss-q-help" for="entry_45">Briefly describe your work and how it relates to the objective of Justified Art! In what way will your piece contribute to the dialogue on racial disparities? Help the jury understand your perspective on the issue.</label>
+			<label class="help-block" for="entry_45">Briefly describe your work and how it relates to the objective of Justified Art! In what way will your piece contribute to the dialogue on racial disparities? Help the jury understand your perspective on the issue.</label>
 			<textarea name="entry.45.single" rows="8" cols="75" class="ss-q-long" id="entry_45"></textarea></div></div></div>
-			<br> <div class="errorbox-good">
+			<br> 
+			<!--<div class="errorbox-good">
 			<div class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">Artwork 2 (Optional)</h2>
 			<div class="ss-section-description ss-no-ignore-whitespace"></div>
 			</div></div></div>
 			<br> <div class="errorbox-good">
 			<div class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_25">Title
 			</label>
-			<label class="ss-q-help" for="entry_25"></label>
-			<input type="text" name="entry.25.single" value="" class="ss-q-short" id="entry_25"></div></div></div>
+			<label class="help-block" for="entry_25"></label>
+			<input type="text" name="entry.25.single" value="" class="form-control" id="entry_25"></div></div></div>
 			<br> <div class="errorbox-good">
 			<div class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_29">Media
 			</label>
-			<label class="ss-q-help" for="entry_29"></label>
-			<input type="text" name="entry.29.single" value="" class="ss-q-short" id="entry_29"></div></div></div>
+			<label class="help-block" for="entry_29"></label>
+			<input type="text" name="entry.29.single" value="" class="form-control" id="entry_29"></div></div></div>
 			<br> <div class="errorbox-good">
 			<div class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_53">Year Created
 			</label>
-			<label class="ss-q-help" for="entry_53"></label>
-			<input type="text" name="entry.53.single" value="" class="ss-q-short" id="entry_53"></div></div></div>
+			<label class="help-block" for="entry_53"></label>
+			<input type="text" name="entry.53.single" value="" class="form-control" id="entry_53"></div></div></div>
 			<br> <div class="errorbox-good">
 			<div class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_27">Dimensions
 			</label>
-			<label class="ss-q-help" for="entry_27">(H x W x D in inches)</label>
-			<input type="text" name="entry.27.single" value="" class="ss-q-short" id="entry_27"></div></div></div>
+			<label class="help-block" for="entry_27">(H x W x D in inches)</label>
+			<input type="text" name="entry.27.single" value="" class="form-control" id="entry_27"></div></div></div>
 			<br> <div class="errorbox-good">
 			<div class="ss-item  ss-paragraph-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_55">Description of Work
 			</label>
-			<label class="ss-q-help" for="entry_55">Briefly describe your work and how it relates to the objective of Justified Art! In what way will your piece  contribute to the dialogue on racial disparity? Help the jury understand your perspective on the issue.</label>
+			<label class="help-block" for="entry_55">Briefly describe your work and how it relates to the objective of Justified Art! In what way will your piece  contribute to the dialogue on racial disparity? Help the jury understand your perspective on the issue.</label>
 			<textarea name="entry.55.single" rows="8" cols="75" class="ss-q-long" id="entry_55"></textarea></div></div></div>
 			<br> <div class="errorbox-good">
 			<div class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">Artwork 3 (Optional)</h2>
@@ -171,43 +172,41 @@
 			<br> <div class="errorbox-good">
 			<div class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_31">Title
 			</label>
-			<label class="ss-q-help" for="entry_31"></label>
-			<input type="text" name="entry.31.single" value="" class="ss-q-short" id="entry_31"></div></div></div>
+			<label class="help-block" for="entry_31"></label>
+			<input type="text" name="entry.31.single" value="" class="form-control" id="entry_31"></div></div></div>
 			<br> <div class="errorbox-good">
 			<div class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_61">Media
 			</label>
-			<label class="ss-q-help" for="entry_61"></label>
-			<input type="text" name="entry.61.single" value="" class="ss-q-short" id="entry_61"></div></div></div>
+			<label class="help-block" for="entry_61"></label>
+			<input type="text" name="entry.61.single" value="" class="form-control" id="entry_61"></div></div></div>
 			<br> <div class="errorbox-good">
 			<div class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_57">Year Created
 			</label>
-			<label class="ss-q-help" for="entry_57"></label>
-			<input type="text" name="entry.57.single" value="" class="ss-q-short" id="entry_57"></div></div></div>
+			<label class="help-block" for="entry_57"></label>
+			<input type="text" name="entry.57.single" value="" class="form-control" id="entry_57"></div></div></div>
 			<br> <div class="errorbox-good">
 			<div class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_33">Dimensions
 			</label>
-			<label class="ss-q-help" for="entry_33">(H x W x D in inches)</label>
-			<input type="text" name="entry.33.single" value="" class="ss-q-short" id="entry_33"></div></div></div>
+			<label class="help-block" for="entry_33">(H x W x D in inches)</label>
+			<input type="text" name="entry.33.single" value="" class="form-control" id="entry_33"></div></div></div>
 			<br> <div class="errorbox-good">
 			<div class="ss-item  ss-paragraph-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_63">Description of Work
 			</label>
-			<label class="ss-q-help" for="entry_63">Briefly describe your work and how it relates to the objective of Justified Art! In what way will your piece  contribute to the dialogue on racial disparity? Help the jury understand your perspective on the issue.</label>
+			<label class="help-block" for="entry_63">Briefly describe your work and how it relates to the objective of Justified Art! In what way will your piece  contribute to the dialogue on racial disparity? Help the jury understand your perspective on the issue.</label>
 			<textarea name="entry.63.single" rows="8" cols="75" class="ss-q-long" id="entry_63"></textarea></div></div></div>
-			<br> <div class="errorbox-good">
+			<br></br>--> 
+			<div class="errorbox-good">
 			<div class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">Liability and Terms Agreement</h2>
 			<div class="ss-section-description ss-no-ignore-whitespace">Entrants whose works are accepted into the show must agree to the following terms by reviewing each item and checking the box below. Submission of this form indicates acceptance of items listed below, in additional to all guidelines and information posted on the website.</div>
 			</div></div></div>
 			<br>
 			<div class="errorbox-good">
 			<div class="ss-item ss-item-required ss-checkbox"><div class="ss-form-entry"><label class="ss-q-title" for="entry_68">
-			<span class="ss-required-asterisk">*</span></label>
-			<label class="ss-q-help" for="entry_68"></label>
-			<label class="ss-choice-label"><input type="checkbox" name="entry.68.group" value="I have read and agree to the terms above" class="ss-q-checkbox" id="group_68_1">
+			</label>
+			<label class="ss-choice-label"><input type="checkbox" name="entry.68.group" value="I have read and agree to the terms above" class="ss-q-checkbox" id="group_68_1"><span class="ss-required-asterisk">*</span>
 			I have read and agree to the <a href="img/justified-art-terms-of-agreement.pdf" target="blank"> terms of agreement</a>.
-				If you have any questions regarding the terms of agreement, please contact info@justifiedart.com. If you are experiencing any technical issues with the form, please contact Nick 
-				Lyell, web developer, at _____@justifiedart.com
-				After submitting this form, you will receive an e-mail from us to confirm that we have received your entry.
-			</p>
+			<label class="help-block" for="entry_68">If you have any questions regarding the terms of agreement, please contact info@justifiedart.com. If you are experiencing any technical issues with the form, please contact Nick 
+				Lyell, web developer, at info@justifiedart.com</label>
 			<input type="hidden" name="pageNumber" value="0">
 			<input type="hidden" name="backupCache" value="">
 			
