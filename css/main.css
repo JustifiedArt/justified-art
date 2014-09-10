@@ -406,6 +406,8 @@ progress:after { content: '%'; }
  */
 .form-notes{
 	font-weight:normal;
+	color:#777;
+	font-size:1rem;
 }
 #ImageForm{
 	margin-left:1em;	
