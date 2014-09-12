@@ -84,7 +84,7 @@ var validateFile = function(sFileName, imageNum){
 var validateGoogleForm = function(){
 	var valid = true;
 	
-	var requiredArray = [0,1,15,8,21,43,45];
+	var requiredArray = [0,1,8,15,21,43,45];
 	
 	
 	for(i=0; i<requiredArray.length; i++){
@@ -103,7 +103,8 @@ var validateGoogleForm = function(){
 		}
 	}
 	//If any of artWork #2 fields are filled out, make sure the rest are as well
-	var artwork2 = false;
+	//Disables with the form disabled fields
+	/*var artwork2 = false;
 	var requiredArray2 = [25,29,53,55];
 	for(i=0;i<requiredArray2.length;i++){
 		var currentEntry = $('#'+'entry_'+requiredArray2[i])[0].value;
@@ -154,7 +155,7 @@ var validateGoogleForm = function(){
 			}
 		}
 	}
-	
+	*/
 	//for checkbox
 	var checkbox = $('#group_68_1')[0];
 	if(valid & checkbox.checked!==true){
