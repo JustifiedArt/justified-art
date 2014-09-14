@@ -542,6 +542,11 @@ progress:after { content: '%'; }
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+@media (max-width:1200px) and (min-width:991px){
+	.span4{
+		height:222px;
+	}	
+}
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
